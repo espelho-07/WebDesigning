@@ -7,30 +7,48 @@
     <link rel="icon" type="image/x-icon"
         href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
     <title>Incredible India</title>
+    <style>
+        .Navigation {
+            text-align: center;
+            padding-top: 1%;
+            font-size: medium;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        .main {}
+
+        .footer {}
+    </style>
 </head>
 
 <body>
     <!-- Header Section -->
-    <header>
-        <h1>Welcome To <mark>Incredible India</mark></h1>
-        <p><b>Discover The Diversity, Beauty, And The Rich Heritage Of India!</b></p>
-        <nav>
-            <ul>
-                <li><a href="http://127.0.0.1:3000/Web_Designing_Project/HOME_PAGE.html" target="_self">Home</a></li>
-                <li><a href="http://127.0.0.1:3000/Web_Designing_Project/CULTURE_PAGE.html"
-                        target="_self"><i>Culture</i></a></li>
-                <li><a href="http://127.0.0.1:3000/Web_Designing_Project/LANDMARKS_PAGE.html"
-                        target="_self">Landmarks</a></li>
-                <li><a href="http://127.0.0.1:3000/Web_Designing_Project/CUISINE_PAGE.html" target="_self">Cuisine</a>
-                </li>
-                <li><a href="http://127.0.0.1:3000/Web_Designing_Project/CONTACT_US_PAGE.html" target="_self">Contact
-                        Us</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <h1 style="text-align: center;">Welcome To <mark>Incredible India</mark></h1>
+        <p style="text-align: center;"><b>Discover The Diversity, Beauty, And The Rich Heritage Of India!</b></p>
+        <div class="Navigation">
+            <nav>
+                <a href="http://127.0.0.1:3000/Web_Designing_Project/HOME_PAGE.html" target="_self"
+                    style="margin-right: 2%;padding-left: 2%;">Home</a>
+                <a href="http://127.0.0.1:3000/Web_Designing_Project/CULTURE_PAGE.html" target="_self"
+                    style="margin-right: 2%;">Culture</a>
+                <a href="http://127.0.0.1:3000/Web_Designing_Project/LANDMARKS_PAGE.html" target="_self"
+                    style="margin-right: 2%;">Landmarks</a>
+                <a href="http://127.0.0.1:3000/Web_Designing_Project/CUISINE_PAGE.html" target="_self"
+                    style="margin-right: 2%;">Cuisine</a>
+
+                <a href="http://127.0.0.1:3000/Web_Designing_Project/CONTACT_US_PAGE.html" target="_self"
+                    style="margin-right: 2%;">Contact
+                    Us</a>
+            </nav>
+        </div>
     </header>
+    <br>
+    <hr>
+    <br>
 
     <!-- Main Content -->
-    <main>
+    <main class="main">
         <!-- About India Section -->
         <section>
             <h2>About India</h2>
@@ -59,7 +77,8 @@
         <!-- Famous Landmarks Section -->
         <section>
             <h2>Famous Landmarks</h2>
-            <p>India is home to <mark>29 UNESCO World Heritage Sites</mark>, making it a paradise for history and
+            <p>
+                India is home to <mark>29 UNESCO World Heritage Sites</mark>, making it a paradise for history and
                 architecture enthusiasts.</p>
             <article>
                 <figure>
@@ -119,14 +138,17 @@
             </figure>
         </section>
     </main>
+    <br>
+    <hr>
 
     <!-- Footer Section -->
-    <footer>
-        <address>
+    <footer class="footer">
+        <p style="text-align: center;"> &copy;2025 Incredible India Project. All Rights Reserved.</p>
+        <p style="text-align: center;">Follow Us On: <a href="" target="_blank">Facebook</a> | <a href=""
+                target="_blank">Twitter</a></p>
+        <address style="text-align: center;">
             Contact us at <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
         </address>
-        &copy;2025 Incredible India Project. All Rights Reserved.</p>
-        <p>Follow Us On: <a href="" target="_blank">Facebook</a> | <a href="" target="_blank">Twitter</a></p>
     </footer>
 </body>
 
