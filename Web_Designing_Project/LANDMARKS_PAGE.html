@@ -10,42 +10,110 @@
         href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
     <!-- Title of the webpage -->
     <title>Incredible India</title>
+    <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+    <style>
+        /* Styling for the body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 5%;
+        }
 
-    .Navigation {
-        text-align: center;
-        padding: 1% 0;
-        font-size: medium;
-        background-color: #F0F0F0;
-    }
+        /* Fixed text at the bottom */
+        .fixed-text {
+            position: fixed;
+            background-color: black;
+            color: whitesmoke;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            /* Added padding for better spacing */
+        }
 
-    .Navigation a {
-        text-decoration: none;
-        color: #0000FF; /* Blue text color */
-        margin-right: 2%;
-        padding-left: 2%;
-    }
+        /* Fixed text at the top */
+        .fixed-text_ {
+            position: fixed;
+            background-color: rgb(233, 17, 17);
+            color: whitesmoke;
+            top: 0%;
+            /* Positions the div at the top */
+            padding-right: 10px;
+        }
+
+        /* Navigation menu styles */
+        .Navigation {
+            text-align: center;
+            padding: 1% 0;
+            font-size: medium;
+            background-color: #F0F0F0;
+        }
+
+        .Navigation a {
+            text-decoration: none;
+            color: #0000FF;
+            /* Blue text color */
+            margin-right: 2%;
+            padding-left: 2%;
+        }
+
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            /* Centers the table horizontally */
+            width: 80%;
+            /* Adjusts the table width */
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Fixed text at the top -->
+    <div class="fixed-text_">
+        <!-- Adjusted text alignment -->
+        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Know More About
+            INDIA</a>
+    </div>
+
+    <!-- Fixed text at the bottom -->
+    <div class="fixed-text">
+        Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
+        we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
+        <a href="mailto:info.mot@gov.in" style="color: red;">info.mot@gov.in</a>.
+        <!-- Corrected email link -->
+    </div>
 
     <!-- Navigation menu -->
     <div class="Navigation">
         <nav>
-            <a href="HOME_PAGE.html" style="margin-right: 2%;">Home</a>
-            <a href="CULTURE_PAGE.html" style="margin-right: 2%;">Culture</a>
-            <a href="LANDMARKS_PAGE.html" style="margin-right: 2%;">Landmarks</a>
-            <a href="CUISINE_PAGE.html" style="margin-right: 2%;">Cuisine</a>
-            <a href="CONTACT_US_PAGE.html" style="margin-right: 2%;">Contact Us</a>
+            <!-- Removed redundant inline styles -->
+            <a href="HOME_PAGE.html">Home</a>
+            <a href="CULTURE_PAGE.html">Culture</a>
+            <a href="LANDMARKS_PAGE.html">Landmarks</a>
+            <a href="CUISINE_PAGE.html">Cuisine</a>
+            <a href="CONTACT_US_PAGE.html">Contact Us</a>
         </nav>
     </div>
+    <br>
+    <hr>
+    <br>
+
     <!-- Main content area -->
     <main>
         <!-- Section for famous landmarks -->
@@ -62,95 +130,95 @@
                     <li><b>Taj Mahal:</b> Located in Agra, this symbol of eternal love is one of the <mark>Seven Wonders
                             Of The World</mark>.</li>
                     <li><b>Red Fort:</b> A UNESCO World Heritage Site in Delhi, showcasing Mughal architecture.</li>
-                    <li><b>Hawa Mahal:</b> Known as the "Palace of Winds", this Jaipur marvel is famous for its
+                    <li><b>Hawa Mahal:</b> Known as the "Palace of Winds," this Jaipur marvel is famous for its
                         intricate latticework.</li>
-                    <li><b>CharMinar:</b> An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic architecture.
+                    <li><b>Charminar:</b> An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic architecture.
                     </li>
                 </ul>
-                <figure>
+                <figure style="text-align: center;">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdi93GKsnrIyTUlHr2maXQQQSEye7brFo4QA&s"
-                        title="Red fort" width="300" height="200" alt="Red Fort in Delhi">
-                    <figcaption>The Majestic Red Fort In Delhi</figcaption>
+                        title="Red Fort" width="300" height="200" alt="Red Fort in Delhi">
+                    <figcaption>The Majestic Red Fort in Delhi</figcaption>
                 </figure>
             </article>
         </section>
 
         <!-- Section for Indian states and capitals -->
         <section>
-            <h2>Indian States And Capitals</h2>
+            <h2>Indian States and Capitals</h2>
             <p>India is a union of states, each with its unique cultural and geographical identity. Here's a detailed
                 table listing some Indian states, their capitals, and key data:</p>
+
+            <!-- Table listing Indian states, their capitals, and key data -->
+            <table border="1" cellspacing="0">
+                <caption>List of Indian States</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">State</th>
+                        <th rowspan="2">Capital</th>
+                        <th colspan="2">Area (in km<sup>2</sup>)</th>
+                        <th rowspan="2">Official Language</th>
+                    </tr>
+                    <tr>
+                        <th>Urban</th>
+                        <th>Rural</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gujarat</td>
+                        <td>Gandhinagar</td>
+                        <td>1,764</td>
+                        <td>185,933</td>
+                        <td>Gujarati</td>
+                    </tr>
+                    <tr>
+                        <td>Maharashtra</td>
+                        <td>Mumbai</td>
+                        <td>307,713</td>
+                        <td>70,940</td>
+                        <td>Marathi</td>
+                    </tr>
+                    <tr>
+                        <td>Rajasthan</td>
+                        <td>Jaipur</td>
+                        <td>342,239</td>
+                        <td>N/A</td>
+                        <td>Hindi</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Note: Data is indicative and may not represent official values.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
-        <!-- Table listing Indian states, their capitals, and key data -->
-        <table border="1px" cellspacing="0">
-            <caption>
-                <h1>List of Indian States</h1>
-            </caption>
-            <thead>
-                <tr>
-                    <th width="250px" rowspan="2" align="center">State</th>
-                    <th width="250px" rowspan="2" align="center">Capital</th>
-                    <th width="250px" colspan="2" align="center">Area(in km<sup>2</sup>)</th>
-                    <th width="250px" rowspan="2" align="center">Official Language</th>
-                </tr>
-                <tr>
-                    <td align="center">Urban</td>
-                    <td align="center">Rural</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Gujarat</td>
-                    <td>Gandhinagar</td>
-                    <td>1,764</td>
-                    <td>185,933</td>
-                    <td>Gujarati</td>
-                </tr>
-                <tr>
-                    <td>Maharashtra</td>
-                    <td>Mumbai</td>
-                    <td>307,713</td>
-                    <td>70,940</td>
-                    <td>Marathi</td>
-                </tr>
-                <tr>
-                    <td>Rajasthan</td>
-                    <td>Jaipur</td>
-                    <td>342,239</td>
-                    <td>NA</td>
-                    <td>Hindi</td>
-                </tr>
-                <tr>
-                    <td colspan="5">Note: Data is indicative and may not represent official values.</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Fun Fact Section -->
+        <section>
+            <h2>Fun Fact</h2>
+            <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices,
+                including one located on a structure in Dal Lake, Srinagar.</p>
+            <figure style="text-align: center;">
+                <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=170x170&k=20&c=cZrJSXaJ74-DHOgvA67CnNBS3GfxnnJrnHl66hev4Wk="
+                    title="Dal Lake" alt="Dal Lake in Srinagar" width="300" height="200">
+                <figcaption>The floating post office in Dal Lake, Srinagar</figcaption>
+            </figure>
+        </section>
 
-        <h1>Fun Fact</h1>
-        <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices, including
-            one located on a structure in Dal Lake, Srinagar.</p>
-        <figure>
-            <img height="200" width="300"
-                src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=170x170&k=20&c=cZrJSXaJ74-DHOgvA67CnNBS3GfxnnJrnHl66hev4Wk="
-                title="Dal Lake" alt="Dal Lake">
-            <figcaption>The floating post office in Dal Lake, Srinagar</figcaption>
-        </figure>
         <!-- Back to Home link -->
         <nav>
-            <a href="HOME_PAGE.html" style="margin-right: 2%;">&#8592 Back to Home</a>
+            <a href="HOME_PAGE.html">&#8592; Back to Home</a>
         </nav>
     </main>
 
-    <!-- Contact information -->
-    <br>
     <hr>
+    <br>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <p style="text-align: center;"> &copy;2025 Incredible India Project. All Rights Reserved.</p>
+        <p style="text-align: center;">&copy; 2025 Incredible India Project. All Rights Reserved.</p>
         <address style="text-align: center;">
-            Contact us at:- <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
+            Contact us at: <a href="mailto:info@incredibleindia.com">info@incredibleindia.com</a>
         </address>
     </footer>
 </body>

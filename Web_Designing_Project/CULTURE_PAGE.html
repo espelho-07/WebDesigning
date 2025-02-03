@@ -3,52 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures the page scales correctly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Website favicon -->
     <link rel="icon" type="image/x-icon"
         href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
     <title>Incredible India</title>
+    <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Styling for the body */
         body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 5%;
+        }
 
-    .Navigation {
-        text-align: center;
-        padding: 1% 0;
-        font-size: medium;
-        background-color: #F0F0F0;
-    }
+        /* Styling for the fixed text at the bottom */
+        .fixed-text {
+            position: fixed;
+            background-color: black;
+            color: whitesmoke;
+            bottom: 0%;
+            text-align: center;
+            width: 100%;
+        }
 
-    .Navigation a {
-        text-decoration: none;
-        color: #0000FF; /* Blue text color */
-        margin-right: 2%;
-        padding-left: 2%;
-    }
+        /* Styling for the fixed text at the top */
+        .fixed-text_ {
+            position: fixed;
+            background-color: rgb(233, 17, 17);
+            color: whitesmoke;
+            top: 0%;
+            /* Positions the div at the top */
+            padding-right: 10px;
+        }
+
+        /* Navigation menu styles */
+        .Navigation {
+            text-align: center;
+            padding: 1% 0;
+            font-size: medium;
+            background-color: #F0F0F0;
+        }
+
+        .Navigation a {
+            text-decoration: none;
+            color: #0000FF;
+            /* Blue text color */
+            margin-right: 2%;
+            padding-left: 2%;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Fixed text at the bottom -->
+    <div class="fixed-text">
+        Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
+        we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
+        <a href="mailto:info.mot@gov.in" style="color: red;">info.mot@gov.in</a>.
+        <!-- Corrected the 'href' to include 'mailto:' and removed extra period -->
+    </div>
+
+    <!-- Fixed text at the top -->
+    <div class="fixed-text_">
+        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Know More About
+            INDIA</a>
+    </div>
+
     <!-- Navigation menu -->
     <div class="Navigation">
         <nav>
-            <a href="HOME_PAGE.html" style="margin-right: 2%;">Home</a>
-            <a href="CULTURE_PAGE.html" style="margin-right: 2%;">Culture</a>
-            <a href="LANDMARKS_PAGE.html" style="margin-right: 2%;">Landmarks</a>
-            <a href="CUISINE_PAGE.html" style="margin-right: 2%;">Cuisine</a>
-            <a href="CONTACT_US_PAGE.html" style="margin-right: 2%;">Contact Us</a>
+            <!-- Removed redundant inline styles -->
+            <a href="HOME_PAGE.html">Home</a>
+            <a href="CULTURE_PAGE.html">Culture</a>
+            <a href="LANDMARKS_PAGE.html">Landmarks</a>
+            <a href="CUISINE_PAGE.html">Cuisine</a>
+            <a href="CONTACT_US_PAGE.html">Contact Us</a>
         </nav>
     </div>
+    <br>
+    <hr>
+    <br>
 
     <!-- Main content area -->
     <main>
         <!-- Section for Indian culture -->
         <section>
             <h2>Indian Culture</h2>
-            <p>Discover The Rich And Diverse Culture Of India, a land of unity in diversity.</p>
+            <p>Discover the rich and diverse culture of India, a land of unity in diversity.</p>
 
             <!-- Article about festivals -->
             <article>
@@ -56,54 +101,58 @@
                 <p>India celebrates a variety of festivals that reflect its rich cultural heritage and religious
                     diversity:</p>
                 <ul>
-                    <li><b>Diwali:</b> Festivals of Lights, symbolizing the victory of light over darkness.</li>
-                    <li><b>Holi:</b> Festivals of Colours, celebrating love and the arrival of spring.</li>
-                    <li><b>Eid:</b> Festival of Harmony, marked by prayers, feasts and charity.</li>
+                    <li><b>Diwali:</b> Festival of Lights, symbolizing the victory of light over darkness.</li>
+                    <li><b>Holi:</b> Festival of Colours, celebrating love and the arrival of spring.</li>
+                    <li><b>Eid:</b> Festival of Harmony, marked by prayers, feasts, and charity.</li>
                     <li><b>Christmas:</b> Festival of Joy, celebrating the birth of Jesus Christ.</li>
                 </ul>
-                <figure>
+                <figure style="text-align: center;">
                     <img src="https://www.indiainputs.com/wp-content/uploads/2024/05/Diwali.webp" title="Diwali"
                         alt="Diwali" width="300" height="200">
-                    <figcaption>Diwali, the festival of light.</figcaption>
+                    <figcaption>Diwali, the festival of lights.</figcaption>
                 </figure>
             </article>
 
             <!-- Section for languages -->
-            <h2>Languages</h2>
-            <p>India is a linguistic treasure trove with 22 officially recognized languages and thousands of regional
-                dialects:</p>
-            <table border="1px" cellspacing="0">
-
-                <head><b>Popular Languages In India</b></head>
-                <thead>
-                    <tr>
-                        <th>Language</th>
-                        <th>Region</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hindi</td>
-                        <td>North India</td>
-                    </tr>
-                    <tr>
-                        <td>Bengali</td>
-                        <td>Region</td>
-                    </tr>
-                    <tr>
-                        <td>Tamil</td>
-                        <td>Tamil Nadu</td>
-                    </tr>
-                    <tr>
-                        <td>Telugu</td>
-                        <td>Andhra Pradesh</td>
-                    </tr>
-                </tbody>
-            </table>
+            <section>
+                <h2>Languages</h2>
+                <p>India is a linguistic treasure trove with 22 officially recognized languages and thousands of
+                    regional dialects:</p>
+                <!-- Corrected table structure -->
+                <table border="1" cellspacing="0">
+                    <!-- Table caption -->
+                    <caption><b>Popular Languages in India</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Region</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hindi</td>
+                            <td>North India</td>
+                        </tr>
+                        <tr>
+                            <td>Bengali</td>
+                            <td>West Bengal</td>
+                            <!-- Specified the region for Bengali -->
+                        </tr>
+                        <tr>
+                            <td>Tamil</td>
+                            <td>Tamil Nadu</td>
+                        </tr>
+                        <tr>
+                            <td>Telugu</td>
+                            <td>Andhra Pradesh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
             <!-- Fun Fact -->
             <details>
-                <summary>Fun Fact</summary>
+                <summary><b>Fun Fact</b></summary>
                 <p>India has the largest postal network in the world, with over 1,50,000 post offices, including one
                     located on a structure in Dal Lake, Srinagar.</p>
             </details>
@@ -118,20 +167,23 @@
                     <li><b>Lehenga:</b> A festive outfit for women, especially in weddings.</li>
                     <li><b>Dhoti:</b> Traditional men's wear in southern and eastern India.</li>
                 </ul>
-                <figure>
+                <figure style="text-align: center;">
                     <img src="https://english.cdn.zeenews.com/sites/default/files/styles/zm_500x286/public/2024/11/18/1583898-istockphoto-849698772-612x612-1.jpg"
                         title="Indian Saree" alt="Indian Saree" width="300" height="200">
                     <figcaption>Traditional Saree - Grace and Elegance</figcaption>
                 </figure>
             </section>
+            <!-- Closed the nested section properly -->
         </section>
     </main>
+    <br>
+    <hr>
 
     <!-- Footer with contact information -->
     <footer class="footer">
-        <p style="text-align: center;"> &copy;2025 Incredible India Project. All Rights Reserved.</p>
+        <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
         <address style="text-align: center;">
-            Contact us at:- <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
+            Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
         </address>
     </footer>
 
