@@ -13,12 +13,15 @@
     <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Styling for the body */
         body {
+            background-color: #FFFFE0;
+        }
+
+        /* Base styling for the body */
+        .body {
             font-family: 'Poppins', sans-serif;
             margin: 5% 5% 0% 5%;
             padding: 0;
-            margin-bottom: 5%;
             background-color: #FFFFE0;
         }
 
@@ -36,7 +39,6 @@
             bottom: 0%;
             text-align: center;
             width: 100%;
-            padding: 10px;
         }
 
         /* Styling for the fixed text at the top */
@@ -69,115 +71,118 @@
 
 
 <body>
-
-    <!-- Fixed text at the top -->
-    <div class="fixed-text_">
-        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Know More About
-            INDIA</a>
-    </div>
-
-    <!-- Navigation menu -->
-    <div class="Navigation">
-        <nav>
-            <!-- Removed redundant inline styles -->
-            <a href="HOME_PAGE.html">Home</a>
-            <a href="CULTURE_PAGE.html">Culture</a>
-            <a href="LANDMARKS_PAGE.html">Landmarks</a>
-            <a href="CUISINE_PAGE.html">Cuisine</a>
-            <a href="CONTACT_US_PAGE.html">Contact Us</a>
-        </nav>
-    </div>
-    <br>
-    <hr>
-    <br>
-
-    <!-- Main content area -->
-    <main>
-        <!-- Section for popular Indian dishes -->
-        <section>
-            <h2>Popular Indian Dishes</h2>
-            <p>Explore the flavours of India through its diverse and rich culinary traditions!</p>
-            <!-- Audio player -->
-            <audio controls>
-                <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
-                    type="audio/ogg">
-                Your browser does not support the audio tag.
-            </audio>
-        </section>
-
-        <!-- Article about North Indian Dishes -->
-        <article>
-            <h3>North Indian Dishes</h3>
-            <p>North India is known for its rich, aromatic, and flavourful dishes often cooked with ghee and spices:</p>
-            <ul>
-                <li><b>Biryani:</b> A fragrant rice dish made with aromatic spices and meat mixed with vegetables.</li>
-                <li><b>Butter Chicken:</b> A creamy, tomato-based curry that's a favorite worldwide.</li>
-                <li><b>Paneer Tikka:</b> Marinated paneer cubes grilled to perfection.</li>
-            </ul>
-            <figure style="text-align: center;">
-                <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/HX/AM/DW/38411130/product-jpeg.jpeg"
-                    title="Biryani" alt="Biryani" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>Aromatic and flavourful Biryani</figcaption>
-            </figure>
-        </article>
-
-        <!-- Article about South Indian Cuisine -->
-        <article>
-            <h3>South Indian Cuisine</h3>
-            <p>South Indian meals offer a wide array of dishes with a perfect blend of spices and tangy flavours:</p>
-            <ul>
-                <li><b>Masala Dosa:</b> A crispy rice crepe stuffed with spicy potato filling.</li>
-                <li><b>Idli and Sambhar:</b> Soft rice cakes served with a tangy lentil-based vegetable stew.</li>
-                <li><b>Chettinad Chicken:</b> A fiery, flavorful chicken dish from Tamil Nadu.</li>
-            </ul>
-            <figure style="text-align: center;">
-                <img src="https://img.freepik.com/premium-photo/butter-masala-dosa-south-indian-traditional-popular-crepe-with-filling-mixture-mashed-potatoes-fried-onions-with-butter-topping-served-with-chutney-sambar-selective-focus_726363-230.jpg?w=360"
-                    title="Masala Dosa" alt="Masala Dosa" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>South Indian favorite: Masala Dosa</figcaption>
-            </figure>
-        </article>
-
-        <!-- Article about Sweet Delights -->
-        <article>
-            <h3>Sweet Delights</h3>
-            <p>No Indian meal is complete without indulging in some mouth-watering desserts:</p>
-            <ul>
-                <li><b>Gulab Jamun:</b> Fried milk solids soaked in sugar syrup.</li>
-                <li><b>Rasgulla:</b> Soft and spongy cheese balls in light sugar syrup.</li>
-                <li><b>Payasam:</b> A South Indian dessert made of milk, rice, and jaggery.</li>
-            </ul>
-            <figure style="text-align: center;">
-                <img src="https://b.zmtcdn.com/data/pictures/2/21030632/17c15efbbf20425dfbc5ff06c285d093_o2_featured_v2.jpg"
-                    title="Gulab Jamun" alt="Gulab Jamun" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>Irresistible Gulab Jamun</figcaption>
-            </figure>
-        </article>
-
-        <!-- Back to Home link -->
-        <nav>
-            <a href="HOME_PAGE.html">&#8592; Back to Home</a>
-        </nav>
-    </main>
-
     <!-- Fixed text at the bottom -->
     <div class="fixed-text">
         Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
         we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
         <a href="mailto:info.mot@gov.in" style="color: red;">info.mot@gov.in</a>.
     </div>
-    <br>
-    <hr>
+    <!-- Fixed text at the top -->
+    <div class="fixed-text_">
+        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Know More About
+            INDIA</a>
+    </div>
+    <div class="body">
+        <!-- Navigation menu -->
+        <div class="Navigation">
+            <nav>
+                <!-- Removed redundant inline styles -->
+                <a href="HOME_PAGE.html">Home</a>
+                <a href="CULTURE_PAGE.html">Culture</a>
+                <a href="LANDMARKS_PAGE.html">Landmarks</a>
+                <a href="CUISINE_PAGE.html">Cuisine</a>
+                <a href="CONTACT_US_PAGE.html">Contact Us</a>
+            </nav>
+        </div>
+        <br>
+        <hr>
+        <br>
 
-    <!-- Contact information -->
-    <footer class="footer">
-        <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
-        <address style="text-align: center;">
-            Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
-        </address>
-    </footer>
+        <!-- Main content area -->
+        <main>
+            <!-- Section for popular Indian dishes -->
+            <section>
+                <h2>Popular Indian Dishes</h2>
+                <p>Explore the flavours of India through its diverse and rich culinary traditions!</p>
+                <!-- Audio player -->
+                <audio controls>
+                    <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
+                        type="audio/ogg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </section>
+
+            <!-- Article about North Indian Dishes -->
+            <article>
+                <h3>North Indian Dishes</h3>
+                <p>North India is known for its rich, aromatic, and flavourful dishes often cooked with ghee and spices:
+                </p>
+                <ul>
+                    <li><b>Biryani:</b> A fragrant rice dish made with aromatic spices and meat mixed with vegetables.
+                    </li>
+                    <li><b>Butter Chicken:</b> A creamy, tomato-based curry that's a favorite worldwide.</li>
+                    <li><b>Paneer Tikka:</b> Marinated paneer cubes grilled to perfection.</li>
+                </ul>
+                <figure style="text-align: center;">
+                    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/HX/AM/DW/38411130/product-jpeg.jpeg"
+                        title="Biryani" alt="Biryani" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>Aromatic and flavourful Biryani</figcaption>
+                </figure>
+            </article>
+
+            <!-- Article about South Indian Cuisine -->
+            <article>
+                <h3>South Indian Cuisine</h3>
+                <p>South Indian meals offer a wide array of dishes with a perfect blend of spices and tangy flavours:
+                </p>
+                <ul>
+                    <li><b>Masala Dosa:</b> A crispy rice crepe stuffed with spicy potato filling.</li>
+                    <li><b>Idli and Sambhar:</b> Soft rice cakes served with a tangy lentil-based vegetable stew.</li>
+                    <li><b>Chettinad Chicken:</b> A fiery, flavorful chicken dish from Tamil Nadu.</li>
+                </ul>
+                <figure style="text-align: center;">
+                    <img src="https://img.freepik.com/premium-photo/butter-masala-dosa-south-indian-traditional-popular-crepe-with-filling-mixture-mashed-potatoes-fried-onions-with-butter-topping-served-with-chutney-sambar-selective-focus_726363-230.jpg?w=360"
+                        title="Masala Dosa" alt="Masala Dosa" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>South Indian favorite: Masala Dosa</figcaption>
+                </figure>
+            </article>
+
+            <!-- Article about Sweet Delights -->
+            <article>
+                <h3>Sweet Delights</h3>
+                <p>No Indian meal is complete without indulging in some mouth-watering desserts:</p>
+                <ul>
+                    <li><b>Gulab Jamun:</b> Fried milk solids soaked in sugar syrup.</li>
+                    <li><b>Rasgulla:</b> Soft and spongy cheese balls in light sugar syrup.</li>
+                    <li><b>Payasam:</b> A South Indian dessert made of milk, rice, and jaggery.</li>
+                </ul>
+                <figure style="text-align: center;">
+                    <img src="https://b.zmtcdn.com/data/pictures/2/21030632/17c15efbbf20425dfbc5ff06c285d093_o2_featured_v2.jpg"
+                        title="Gulab Jamun" alt="Gulab Jamun" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>Irresistible Gulab Jamun</figcaption>
+                </figure>
+            </article>
+
+            <!-- Back to Home link -->
+            <nav>
+                <a href="HOME_PAGE.html">&#8592; Back to Home</a>
+            </nav>
+        </main>
+        <br>
+        <hr>
+
+        <!-- Contact information -->
+        <footer class="footer">
+            <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
+            <address style="text-align: center;">
+                Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
+            </address>
+        </footer>
+    </div>
+
 </body>
 
 </html>

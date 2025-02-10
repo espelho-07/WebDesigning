@@ -14,18 +14,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        body{
+            background-color: #FFFFE0;
+        }
         /* Base styling for the body */
-        body {
+        .body {
             font-family: 'Poppins', sans-serif;
             margin: 5% 5% 0% 5%;
             padding: 0;
-            margin-bottom: 5%;
             background-color: #FFFFE0;
         }
 
         a:hover {
             font-size: 30px;
-            color: orangered;
             transition: 1s;
         }
 
@@ -37,7 +38,7 @@
             bottom: 0%;
             /* Positions the div at the bottom */
             text-align: center;
-            width: 100%;
+            width: 100%;        
         }
 
         /* Styling for the fixed text at the top */
@@ -85,8 +86,9 @@
 </head>
 
 <body>
+
     <!-- Fixed text at the bottom -->
-    <div class="fixed-text">
+    <div class="fixed-text" style="margin-left: 0%;margin-right: 0%;">
         Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
         we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
         <a href="mailto:info.mot@gov.in" style="color: red;">info.mot@gov.in</a>.
@@ -98,10 +100,11 @@
             INDIA</a>
     </div>
 
+    <div class="body">
     <!-- Header Section -->
     <header class="header">
         <h1>Welcome To <mark>Incredible India</mark></h1>
-        <p><b>Discover The Diversity, Beauty, And The Rich Heritage Of India!</b></p>
+        <p><b>"Discover The Diversity, Beauty, And The Rich Heritage Of India!"</b></p>
         <!-- Navigation bar -->
         <div class="Navigation">
             <nav>
@@ -256,6 +259,7 @@
         </address>
     </footer>
     <!-- Closed the body tag after all content -->
+</div>
 </body>
 
 </html>

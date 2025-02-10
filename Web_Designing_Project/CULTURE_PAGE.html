@@ -12,13 +12,17 @@
     <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Styling for the body */
         body {
+            background-color: #FFFFE0;
+        }
+
+        /* Base styling for the body */
+        .body {
             font-family: 'Poppins', sans-serif;
             margin: 5% 5% 0% 5%;
             padding: 0;
-            margin-bottom: 5%;
             background-color: #FFFFE0;
+
         }
 
         a:hover {
@@ -80,120 +84,123 @@
             INDIA</a>
     </div>
 
-    <!-- Navigation menu -->
-    <div class="Navigation">
-        <nav>
-            <!-- Removed redundant inline styles -->
-            <a href="HOME_PAGE.html">Home</a>
-            <a href="CULTURE_PAGE.html">Culture</a>
-            <a href="LANDMARKS_PAGE.html">Landmarks</a>
-            <a href="CUISINE_PAGE.html">Cuisine</a>
-            <a href="CONTACT_US_PAGE.html">Contact Us</a>
-        </nav>
+    <div class="body">
+
+        <!-- Navigation menu -->
+        <div class="Navigation">
+            <nav>
+                <!-- Removed redundant inline styles -->
+                <a href="HOME_PAGE.html">Home</a>
+                <a href="CULTURE_PAGE.html">Culture</a>
+                <a href="LANDMARKS_PAGE.html">Landmarks</a>
+                <a href="CUISINE_PAGE.html">Cuisine</a>
+                <a href="CONTACT_US_PAGE.html">Contact Us</a>
+            </nav>
+        </div>
+        <br>
+        <hr>
+        <br>
+
+        <!-- Main content area -->
+        <main>
+            <!-- Section for Indian culture -->
+            <section>
+                <h2>Indian Culture</h2>
+                <p>Discover the rich and diverse culture of India, a land of unity in diversity.</p>
+
+                <!-- Article about festivals -->
+                <article>
+                    <h3>Festivals</h3>
+                    <p>India celebrates a variety of festivals that reflect its rich cultural heritage and religious
+                        diversity:</p>
+                    <ul>
+                        <li><b>Diwali:</b> Festival of Lights, symbolizing the victory of light over darkness.</li>
+                        <li><b>Holi:</b> Festival of Colours, celebrating love and the arrival of spring.</li>
+                        <li><b>Eid:</b> Festival of Harmony, marked by prayers, feasts, and charity.</li>
+                        <li><b>Christmas:</b> Festival of Joy, celebrating the birth of Jesus Christ.</li>
+                    </ul>
+                    <figure style="text-align: center;">
+                        <img src="https://www.indiainputs.com/wp-content/uploads/2024/05/Diwali.webp" title="Diwali"
+                            alt="Diwali" width="300" height="200" style="border-radius: 10px; border: 2px dotted;">
+                        <figcaption>Diwali, the festival of lights.</figcaption>
+                    </figure>
+                </article>
+
+                <!-- Section for languages -->
+                <section>
+                    <h2>Languages</h2>
+                    <p>India is a linguistic treasure trove with 22 officially recognized languages and thousands of
+                        regional dialects:</p>
+                    <!-- Corrected table structure -->
+                    <table border="1" cellspacing="0">
+                        <!-- Table caption -->
+                        <caption><b>Popular Languages in India</b></caption>
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>Region</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hindi</td>
+                                <td>North India</td>
+                            </tr>
+                            <tr>
+                                <td>Bengali</td>
+                                <td>West Bengal</td>
+                                <!-- Specified the region for Bengali -->
+                            </tr>
+                            <tr>
+                                <td>Tamil</td>
+                                <td>Tamil Nadu</td>
+                            </tr>
+                            <tr>
+                                <td>Telugu</td>
+                                <td>Andhra Pradesh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Fun Fact -->
+                <details>
+                    <summary><b>Fun Fact</b></summary>
+                    <p>India has the largest postal network in the world, with over 1,50,000 post offices, including one
+                        located on a structure in Dal Lake, Srinagar.</p>
+                </details>
+
+                <!-- Section for traditional attire -->
+                <section>
+                    <h2>Traditional Attire</h2>
+                    <p>Indian traditional clothing varies by region, showcasing its cultural diversity:</p>
+                    <ul>
+                        <li><b>Saree:</b> Elegant drape worn by women across India.</li>
+                        <li><b>Kurta-Pajama:</b> Comfortable attire for men, popular in the north.</li>
+                        <li><b>Lehenga:</b> A festive outfit for women, especially in weddings.</li>
+                        <li><b>Dhoti:</b> Traditional men's wear in southern and eastern India.</li>
+                    </ul>
+                    <figure style="text-align: center;">
+                        <img src="https://english.cdn.zeenews.com/sites/default/files/styles/zm_500x286/public/2024/11/18/1583898-istockphoto-849698772-612x612-1.jpg"
+                            title="Indian Saree" alt="Indian Saree" width="300" height="200"
+                            style="border-radius: 10px; border: 2px dotted;">
+                        <figcaption>Traditional Saree - Grace and Elegance</figcaption>
+                    </figure>
+                </section>
+                <!-- Closed the nested section properly -->
+            </section>
+        </main>
+        <br>
+        <hr>
+
+        <!-- Footer with contact information -->
+        <footer class="footer">
+            <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
+            <address style="text-align: center;">
+                Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
+            </address>
+        </footer>
     </div>
-    <br>
-    <hr>
-    <br>
-
-    <!-- Main content area -->
-    <main>
-        <!-- Section for Indian culture -->
-        <section>
-            <h2>Indian Culture</h2>
-            <p>Discover the rich and diverse culture of India, a land of unity in diversity.</p>
-
-            <!-- Article about festivals -->
-            <article>
-                <h3>Festivals</h3>
-                <p>India celebrates a variety of festivals that reflect its rich cultural heritage and religious
-                    diversity:</p>
-                <ul>
-                    <li><b>Diwali:</b> Festival of Lights, symbolizing the victory of light over darkness.</li>
-                    <li><b>Holi:</b> Festival of Colours, celebrating love and the arrival of spring.</li>
-                    <li><b>Eid:</b> Festival of Harmony, marked by prayers, feasts, and charity.</li>
-                    <li><b>Christmas:</b> Festival of Joy, celebrating the birth of Jesus Christ.</li>
-                </ul>
-                <figure style="text-align: center;">
-                    <img src="https://www.indiainputs.com/wp-content/uploads/2024/05/Diwali.webp" title="Diwali"
-                        alt="Diwali" width="300" height="200" style="border-radius: 10px; border: 2px dotted;">
-                    <figcaption>Diwali, the festival of lights.</figcaption>
-                </figure>
-            </article>
-
-            <!-- Section for languages -->
-            <section>
-                <h2>Languages</h2>
-                <p>India is a linguistic treasure trove with 22 officially recognized languages and thousands of
-                    regional dialects:</p>
-                <!-- Corrected table structure -->
-                <table border="1" cellspacing="0">
-                    <!-- Table caption -->
-                    <caption><b>Popular Languages in India</b></caption>
-                    <thead>
-                        <tr>
-                            <th>Language</th>
-                            <th>Region</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hindi</td>
-                            <td>North India</td>
-                        </tr>
-                        <tr>
-                            <td>Bengali</td>
-                            <td>West Bengal</td>
-                            <!-- Specified the region for Bengali -->
-                        </tr>
-                        <tr>
-                            <td>Tamil</td>
-                            <td>Tamil Nadu</td>
-                        </tr>
-                        <tr>
-                            <td>Telugu</td>
-                            <td>Andhra Pradesh</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Fun Fact -->
-            <details>
-                <summary><b>Fun Fact</b></summary>
-                <p>India has the largest postal network in the world, with over 1,50,000 post offices, including one
-                    located on a structure in Dal Lake, Srinagar.</p>
-            </details>
-
-            <!-- Section for traditional attire -->
-            <section>
-                <h2>Traditional Attire</h2>
-                <p>Indian traditional clothing varies by region, showcasing its cultural diversity:</p>
-                <ul>
-                    <li><b>Saree:</b> Elegant drape worn by women across India.</li>
-                    <li><b>Kurta-Pajama:</b> Comfortable attire for men, popular in the north.</li>
-                    <li><b>Lehenga:</b> A festive outfit for women, especially in weddings.</li>
-                    <li><b>Dhoti:</b> Traditional men's wear in southern and eastern India.</li>
-                </ul>
-                <figure style="text-align: center;">
-                    <img src="https://english.cdn.zeenews.com/sites/default/files/styles/zm_500x286/public/2024/11/18/1583898-istockphoto-849698772-612x612-1.jpg"
-                        title="Indian Saree" alt="Indian Saree" width="300" height="200"
-                        style="border-radius: 10px; border: 2px dotted;">
-                    <figcaption>Traditional Saree - Grace and Elegance</figcaption>
-                </figure>
-            </section>
-            <!-- Closed the nested section properly -->
-        </section>
-    </main>
-    <br>
-    <hr>
-
-    <!-- Footer with contact information -->
-    <footer class="footer">
-        <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
-        <address style="text-align: center;">
-            Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
-        </address>
-    </footer>
 
 </body>
 
