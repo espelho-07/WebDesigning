@@ -14,16 +14,17 @@
     <style>
         body {
             background-color: #FFFFE0;
+            /*background-image: linear-gradient( orange , white, green);*/
         }
 
         /* Base styling for the body */
         .body {
             font-family: 'Poppins', sans-serif;
-            margin: 2% 5% 0% 5%;
+            margin: 5% 5% 0% 5%;
             padding: 0;
-            margin-bottom: 2.5%;
+            margin-bottom: 5%;
+            /*background-image: linear-gradient( orange , white, green);*/
             background-color: #FFFFE0;
-
         }
 
         a:hover {
@@ -40,6 +41,14 @@
             bottom: 0%;
             text-align: center;
             width: 100%;
+        }
+        figure {
+            transition: transform 0.3s;
+
+        }
+
+        figure:hover {
+            transform: scale(1.1);
         }
 
         /* Styling for the fixed text at the top */
@@ -71,6 +80,7 @@
 </head>
 
 <body>
+    
     <!-- Fixed text at the bottom -->
     <div class="fixed-text">
         Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
@@ -84,9 +94,17 @@
         <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Know More About
             INDIA</a>
     </div>
+    <div class="chaatbot">
+        <a href="https://chatgpt.com/" target="_self">
+            <img src="https://images-platform.99static.com/jQu2xohritutSVmnVq7np7rbkxg=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/106/106359/attachment_106359975"
+                alt="Chatbot" title="How Can I Help You? &#x1F60A" width="50" height="50"
+                style="border-radius: 50%; position: fixed; bottom: 20px; right: 20px;">
+        </a>
+    </div>
 
     <div class="body">
-        <p style="text-align: center;font-family: 'Poppins', sans-serif;font-size: xx-large;font-weight: bolder;">INDIAN CULTURE</p>
+        <p style="text-align: center;font-family: 'Poppins', sans-serif;font-size: xx-large;font-weight: bolder;">INDIAN
+            CULTURE</p>
 
         <!-- Navigation menu -->
         <div class="Navigation">
@@ -97,6 +115,7 @@
                 <a href="LANDMARKS_PAGE.html">Landmarks</a>
                 <a href="CUISINE_PAGE.html">Cuisine</a>
                 <a href="CONTACT_US_PAGE.html">Contact Us</a>
+                <input type="text" placeholder="Search.." style="position: fixed; top: 20px; right: 20px;">
             </nav>
         </div>
         <br>

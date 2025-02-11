@@ -13,17 +13,19 @@
     <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-         body{
+        body {
             background-color: #FFFFE0;
+            /*background-image: linear-gradient( orange , white, green);*/
         }
+
         /* Base styling for the body */
         .body {
             font-family: 'Poppins', sans-serif;
-            margin: 2% 5% 0% 5%;
+            margin: 5% 5% 0% 5%;
             padding: 0;
-            margin-bottom: 2.5%;
+            margin-bottom: 5%;
+            /*background-image: linear-gradient( orange , white, green);*/
             background-color: #FFFFE0;
-            
         }
 
         a:hover {
@@ -58,6 +60,14 @@
             padding: 1% 0;
             font-size: medium;
             background-color: #F0F0F0;
+        }
+        figure {
+            transition: transform 0.3s;
+
+        }
+
+        figure:hover {
+            transform: scale(1.1);
         }
 
         .Navigation a {
@@ -108,133 +118,148 @@
         <!-- Corrected email link -->
     </div>
 
-    <div class="body">
-        <p style="text-align: center;font-family: 'Poppins', sans-serif;font-size: xx-large;font-weight: bolder;">INDIAN LANDMARKS</p>
-    <!-- Navigation menu -->
-    <div class="Navigation">
-        <nav>
-            <!-- Removed redundant inline styles -->
-            <a href="HOME_PAGE.html">Home</a>
-            <a href="CULTURE_PAGE.html">Culture</a>
-            <a href="LANDMARKS_PAGE.html">Landmarks</a>
-            <a href="CUISINE_PAGE.html">Cuisine</a>
-            <a href="CONTACT_US_PAGE.html">Contact Us</a>
-        </nav>
+    <div class="chaatbot">
+        <a href="https://chatgpt.com/" target="_self">
+            <img src="https://images-platform.99static.com/jQu2xohritutSVmnVq7np7rbkxg=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/106/106359/attachment_106359975"
+                alt="Chatbot" title="How Can I Help You? &#x1F60A" width="50" height="50"
+                style="border-radius: 50%; position: fixed; bottom: 20px; right: 20px;">
+        </a>
     </div>
-    <br>
-    <hr>
-    <br>
 
-    <!-- Main content area -->
-    <main>
-        <!-- Section for famous landmarks -->
-        <section>
-            <h2>Famous Landmarks In India</h2>
-            <p><b>Explore the iconic landmarks that define the heritage and history of India.</b></p>
 
-            <!-- Article about iconic monuments -->
-            <article>
-                <h3>Iconic Monuments</h3>
-                <p>India is home to some of the awe-inspiring landmarks in the world. These monuments reflect its rich
-                    cultural heritage and historical significance:</p>
-                <ul>
-                    <li><b>Taj Mahal:</b> Located in Agra, this symbol of eternal love is one of the <mark>Seven Wonders
-                            Of The World</mark>.</li>
-                    <li><b>Red Fort:</b> A UNESCO World Heritage Site in Delhi, showcasing Mughal architecture.</li>
-                    <li><b>Hawa Mahal:</b> Known as the "Palace of Winds," this Jaipur marvel is famous for its
-                        intricate latticework.</li>
-                    <li><b>Charminar:</b> An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic architecture.
-                    </li>
-                </ul>
+    <div class="body">
+        <p style="text-align: center;font-family: 'Poppins', sans-serif;font-size: xx-large;font-weight: bolder;">INDIAN
+            LANDMARKS</p>
+        <!-- Navigation menu -->
+        <div class="Navigation">
+            <nav>
+                <!-- Removed redundant inline styles -->
+                <a href="HOME_PAGE.html">Home</a>
+                <a href="CULTURE_PAGE.html">Culture</a>
+                <a href="LANDMARKS_PAGE.html">Landmarks</a>
+                <a href="CUISINE_PAGE.html">Cuisine</a>
+                <a href="CONTACT_US_PAGE.html">Contact Us</a>
+                <input type="text" placeholder="Search.." style="position: fixed; top: 20px; right: 20px;">
+            </nav>
+        </div>
+        <br>
+        <hr>
+        <br>
+
+        <!-- Main content area -->
+        <main>
+            <!-- Section for famous landmarks -->
+            <section>
+                <h2>Famous Landmarks In India</h2>
+                <p><b>Explore the iconic landmarks that define the heritage and history of India.</b></p>
+
+                <!-- Article about iconic monuments -->
+                <article>
+                    <h3>Iconic Monuments</h3>
+                    <p>India is home to some of the awe-inspiring landmarks in the world. These monuments reflect its
+                        rich
+                        cultural heritage and historical significance:</p>
+                    <ul>
+                        <li><b>Taj Mahal:</b> Located in Agra, this symbol of eternal love is one of the <mark>Seven
+                                Wonders
+                                Of The World</mark>.</li>
+                        <li><b>Red Fort:</b> A UNESCO World Heritage Site in Delhi, showcasing Mughal architecture.</li>
+                        <li><b>Hawa Mahal:</b> Known as the "Palace of Winds," this Jaipur marvel is famous for its
+                            intricate latticework.</li>
+                        <li><b>Charminar:</b> An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic
+                            architecture.
+                        </li>
+                    </ul>
+                    <figure style="text-align: center;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdi93GKsnrIyTUlHr2maXQQQSEye7brFo4QA&s"
+                            title="Red Fort" width="300" height="200" alt="Red Fort in Delhi"
+                            style="border-radius: 10px; border: 2px dotted;">
+                        <figcaption>The Majestic Red Fort in Delhi</figcaption>
+                    </figure>
+                </article>
+            </section>
+
+            <!-- Section for Indian states and capitals -->
+            <section>
+                <h2>Indian States and Capitals</h2>
+                <p>India is a union of states, each with its unique cultural and geographical identity. Here's a
+                    detailed
+                    table listing some Indian states, their capitals, and key data:</p>
+
+                <!-- Table listing Indian states, their capitals, and key data -->
+                <table border="1" cellspacing="0">
+                    <caption>List of Indian States</caption>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">State</th>
+                            <th rowspan="2">Capital</th>
+                            <th colspan="2">Area (in km<sup>2</sup>)</th>
+                            <th rowspan="2">Official Language</th>
+                        </tr>
+                        <tr>
+                            <th>Urban</th>
+                            <th>Rural</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gujarat</td>
+                            <td>Gandhinagar</td>
+                            <td>1,764</td>
+                            <td>185,933</td>
+                            <td>Gujarati</td>
+                        </tr>
+                        <tr>
+                            <td>Maharashtra</td>
+                            <td>Mumbai</td>
+                            <td>307,713</td>
+                            <td>70,940</td>
+                            <td>Marathi</td>
+                        </tr>
+                        <tr>
+                            <td>Rajasthan</td>
+                            <td>Jaipur</td>
+                            <td>342,239</td>
+                            <td>N/A</td>
+                            <td>Hindi</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Note: Data is indicative and may not represent official values.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Fun Fact Section -->
+            <section>
+                <h2>Fun Fact</h2>
+                <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices,
+                    including one located on a structure in Dal Lake, Srinagar.</p>
                 <figure style="text-align: center;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdi93GKsnrIyTUlHr2maXQQQSEye7brFo4QA&s"
-                        title="Red Fort" width="300" height="200" alt="Red Fort in Delhi"
+                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=170x170&k=20&c=cZrJSXaJ74-DHOgvA67CnNBS3GfxnnJrnHl66hev4Wk="
+                        title="Dal Lake" alt="Dal Lake in Srinagar" width="300" height="200"
                         style="border-radius: 10px; border: 2px dotted;">
-                    <figcaption>The Majestic Red Fort in Delhi</figcaption>
+                    <figcaption>The floating post office in Dal Lake, Srinagar</figcaption>
                 </figure>
-            </article>
-        </section>
+            </section>
 
-        <!-- Section for Indian states and capitals -->
-        <section>
-            <h2>Indian States and Capitals</h2>
-            <p>India is a union of states, each with its unique cultural and geographical identity. Here's a detailed
-                table listing some Indian states, their capitals, and key data:</p>
+            <!-- Back to Home link -->
+            <nav>
+                <a href="HOME_PAGE.html">&#8592; Back to Home</a>
+            </nav>
+        </main>
 
-            <!-- Table listing Indian states, their capitals, and key data -->
-            <table border="1" cellspacing="0">
-                <caption>List of Indian States</caption>
-                <thead>
-                    <tr>
-                        <th rowspan="2">State</th>
-                        <th rowspan="2">Capital</th>
-                        <th colspan="2">Area (in km<sup>2</sup>)</th>
-                        <th rowspan="2">Official Language</th>
-                    </tr>
-                    <tr>
-                        <th>Urban</th>
-                        <th>Rural</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Gujarat</td>
-                        <td>Gandhinagar</td>
-                        <td>1,764</td>
-                        <td>185,933</td>
-                        <td>Gujarati</td>
-                    </tr>
-                    <tr>
-                        <td>Maharashtra</td>
-                        <td>Mumbai</td>
-                        <td>307,713</td>
-                        <td>70,940</td>
-                        <td>Marathi</td>
-                    </tr>
-                    <tr>
-                        <td>Rajasthan</td>
-                        <td>Jaipur</td>
-                        <td>342,239</td>
-                        <td>N/A</td>
-                        <td>Hindi</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">Note: Data is indicative and may not represent official values.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <hr>
+        <br>
 
-        <!-- Fun Fact Section -->
-        <section>
-            <h2>Fun Fact</h2>
-            <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices,
-                including one located on a structure in Dal Lake, Srinagar.</p>
-            <figure style="text-align: center;">
-                <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=170x170&k=20&c=cZrJSXaJ74-DHOgvA67CnNBS3GfxnnJrnHl66hev4Wk="
-                    title="Dal Lake" alt="Dal Lake in Srinagar" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>The floating post office in Dal Lake, Srinagar</figcaption>
-            </figure>
-        </section>
-
-        <!-- Back to Home link -->
-        <nav>
-            <a href="HOME_PAGE.html">&#8592; Back to Home</a>
-        </nav>
-    </main>
-
-    <hr>
-    <br>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p style="text-align: center;">&copy; 2025 Incredible India Project. All Rights Reserved.</p>
-        <address style="text-align: center;">
-            Contact us at: <a href="mailto:info@incredibleindia.com">info@incredibleindia.com</a>
-        </address>
-    </footer>
-</div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p style="text-align: center;">&copy; 2025 Incredible India Project. All Rights Reserved.</p>
+            <address style="text-align: center;">
+                Contact us at: <a href="mailto:info@incredibleindia.com">info@incredibleindia.com</a>
+            </address>
+        </footer>
+    </div>
 </body>
 
 </html>

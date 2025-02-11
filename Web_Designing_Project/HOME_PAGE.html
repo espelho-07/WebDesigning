@@ -14,9 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        body{
+        body {
             background-color: #FFFFE0;
+            /*background-image: linear-gradient( orange , white, green);*/
         }
+
         /* Base styling for the body */
         .body {
             font-family: 'Poppins', sans-serif;
@@ -24,6 +26,15 @@
             padding: 0;
             margin-bottom: 5%;
             background-color: #FFFFE0;
+        }
+
+        figure {
+            transition: transform 0.3s;
+
+        }
+
+        figure:hover {
+            transform: scale(1.1);
         }
 
         a:hover {
@@ -39,7 +50,7 @@
             bottom: 0%;
             /* Positions the div at the bottom */
             text-align: center;
-            width: 100%;        
+            width: 100%;
         }
 
         /* Styling for the fixed text at the top */
@@ -101,166 +112,182 @@
             INDIA</a>
     </div>
 
+    <div class="chaatbot">
+        <a href="https://chatgpt.com/" target="_self">
+            <img src="https://images-platform.99static.com/jQu2xohritutSVmnVq7np7rbkxg=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/106/106359/attachment_106359975"
+                alt="Chatbot" title="How Can I Help You? &#x1F60A" width="50" height="50"
+                style="border-radius: 50%; position: fixed; bottom: 20px; right: 20px;">
+        </a>
+    </div>
+
     <div class="body">
-    <!-- Header Section -->
-    <header class="header">
-        <h1>Welcome To <mark>Incredible India</mark></h1>
-        <p><b>"Discover The Diversity, Beauty, And The Rich Heritage Of India!"</b></p>
-        <!-- Navigation bar -->
-        <div class="Navigation">
-            <nav>
-                <a href="HOME_PAGE.html">Home</a>
-                <a href="CULTURE_PAGE.html">Culture</a>
-                <a href="LANDMARKS_PAGE.html">Landmarks</a>
-                <a href="CUISINE_PAGE.html">Cuisine</a>
-                <a href="CONTACT_US_PAGE.html">Contact Us</a>
-            </nav>
-        </div>
-    </header>
-    <br>
-    <hr>
-    <br>
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Welcome To <mark>Incredible India</mark></h1>
+            <p><b>"Discover The Diversity, Beauty, And The Rich Heritage Of India!"</b></p>
+            <!-- Navigation bar -->
+            <div class="Navigation">
+                <nav>
+                    <a href="HOME_PAGE.html">Home</a>
+                    <a href="CULTURE_PAGE.html">Culture</a>
+                    <a href="LANDMARKS_PAGE.html">Landmarks</a>
+                    <a href="CUISINE_PAGE.html">Cuisine</a>
+                    <a href="CONTACT_US_PAGE.html">Contact Us</a>
+                    <input type="text" placeholder="Search.." style="position: fixed; top: 20px; right: 20px;">
+                </nav>
+            </div>
+        </header>
+        <br>
+        <hr>
+        <br>
 
-    <!-- Main content starts here; moved inside the body -->
-    <main class="main">
-        <!-- About India Section -->
-        <section>
-            <h2>About India</h2>
-            <p>India is a land of incredible diversity. From the snow-capped peaks of the <i>Himalayas</i> to the serene
-                backwaters of Kerala, every corner of India tells a unique story. India is the <b>second-most populous
-                    country</b> in the world and boasts a history spanning thousands of years. Its rich traditions have
-                left an indelible mark on the world.</p>
-            <figure style="text-align: center;">
-                <!-- Image of India map -->
-                <img src="https://t4.ftcdn.net/jpg/01/14/62/33/360_F_114623372_ZUIjiBqg3GGiTkkvFzAk4GJ0zpqliJE7.jpg"
-                    title="INDIA" alt="Map of India" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>India: A land of cultural and geographical diversity.</figcaption>
-            </figure>
-            <p style="text-align: center; font-weight: bolder;">"Unity in diversity is not just a slogan in India but a
-                way of life."</p>
-        </section>
+        <!-- Main content starts here; moved inside the body -->
+        <main class="main">
+            <!-- About India Section -->
+            <section>
+                <h2>About India</h2>
+                <p>India is a land of incredible diversity. From the snow-capped peaks of the <i>Himalayas</i> to the
+                    serene
+                    backwaters of Kerala, every corner of India tells a unique story. India is the <b>second-most
+                        populous
+                        country</b> in the world and boasts a history spanning thousands of years. Its rich traditions
+                    have
+                    left an indelible mark on the world.</p>
+                <figure style="text-align: center;">
+                    <!-- Image of India map -->
+                    <img src="https://t4.ftcdn.net/jpg/01/14/62/33/360_F_114623372_ZUIjiBqg3GGiTkkvFzAk4GJ0zpqliJE7.jpg"
+                        title="INDIA" alt="Map of India" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>India: A land of cultural and geographical diversity.</figcaption>
+                </figure>
+                <p style="text-align: center; font-weight: bolder;">"Unity in diversity is not just a slogan in India
+                    but a
+                    way of life."</p>
+            </section>
 
-        <!-- Highlights Section -->
-        <section>
-            <h2>Highlights of India Include</h2>
-            <ul>
-                <li><b>Architecture:</b> Majestic monuments like the Taj Mahal and Red Fort.</li>
-                <li><b>Cuisine:</b> Diverse flavors from spicy curries to sweet desserts.</li>
-                <li><b>Culture:</b> Vibrant festivals, classical dances, and colorful attire.</li>
-            </ul>
-        </section>
+            <!-- Highlights Section -->
+            <section>
+                <h2>Highlights of India Include</h2>
+                <ul>
+                    <li><b>Architecture:</b> Majestic monuments like the Taj Mahal and Red Fort.</li>
+                    <li><b>Cuisine:</b> Diverse flavors from spicy curries to sweet desserts.</li>
+                    <li><b>Culture:</b> Vibrant festivals, classical dances, and colorful attire.</li>
+                </ul>
+            </section>
 
-        <!-- Famous Landmarks Section -->
-        <section>
-            <h2>Famous Landmarks</h2>
-            <p>India is home to <mark>29 UNESCO World Heritage Sites</mark>, making it a paradise for history and
-                architecture enthusiasts.</p>
-            <article>
-                <!-- List of landmarks -->
-                <ol>
-                    <li>
-                        <figure style="text-align: center;">
-                            <!-- Taj Mahal image -->
-                            <img src="https://www.travelandleisure.com/thmb/wdUcyBQyQ0wUVs4wLahp0iWgZhc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/taj-mahal-agra-india-TAJ0217-9eab8f20d11d4391901867ed1ce222b8.jpg"
-                                title="TAJ MAHAL" alt="Taj Mahal" width="300" height="200"
-                                style="border-radius: 10px; border: 2px dotted;">
-                            <figcaption>The Taj Mahal, a symbol of eternal love.</figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure style="text-align: center;">
-                            <!-- Qutub Minar image -->
-                            <img src="https://media.gettyimages.com/id/165204592/photo/qutub-minar-delhi-india.jpg?s=612x612&w=gi&k=20&c=KxOGKa9Bs547e3lu_EbkNxxBppY3IW95uVvCAKZj5fE="
-                                title="QUTUB MINAR" alt="Qutub Minar" width="300" height="200"
-                                style="border-radius: 10px; border: 2px dotted;">
-                            <figcaption>The Qutub Minar, an architectural marvel in Delhi.</figcaption>
-                        </figure>
-                    </li>
-                </ol>
-            </article>
-            <p style="text-align: center;"><i>Don't miss exploring the intricate carvings, towering minarets, and
-                    breathtaking landscapes!</i></p>
-        </section>
+            <!-- Famous Landmarks Section -->
+            <section>
+                <h2>Famous Landmarks</h2>
+                <p>India is home to <mark>29 UNESCO World Heritage Sites</mark>, making it a paradise for history and
+                    architecture enthusiasts.</p>
+                <article>
+                    <!-- List of landmarks -->
+                    <ol>
+                        <li>
+                            <figure style="text-align: center;">
+                                <!-- Taj Mahal image -->
+                                <img src="https://www.travelandleisure.com/thmb/wdUcyBQyQ0wUVs4wLahp0iWgZhc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/taj-mahal-agra-india-TAJ0217-9eab8f20d11d4391901867ed1ce222b8.jpg"
+                                    title="TAJ MAHAL" alt="Taj Mahal" width="300" height="200"
+                                    style="border-radius: 10px; border: 2px dotted;">
+                                <figcaption>The Taj Mahal, a symbol of eternal love.</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure style="text-align: center;">
+                                <!-- Qutub Minar image -->
+                                <img src="https://media.gettyimages.com/id/165204592/photo/qutub-minar-delhi-india.jpg?s=612x612&w=gi&k=20&c=KxOGKa9Bs547e3lu_EbkNxxBppY3IW95uVvCAKZj5fE="
+                                    title="QUTUB MINAR" alt="Qutub Minar" width="300" height="200"
+                                    style="border-radius: 10px; border: 2px dotted;">
+                                <figcaption>The Qutub Minar, an architectural marvel in Delhi.</figcaption>
+                            </figure>
+                        </li>
+                    </ol>
+                </article>
+                <p style="text-align: center;"><i>Don't miss exploring the intricate carvings, towering minarets, and
+                        breathtaking landscapes!</i></p>
+            </section>
 
-        <!-- Indian Culture Section -->
-        <section>
-            <h2>Indian Culture</h2>
-            <p>India's <b>cultural heritage</b> is a blend of various traditions, languages, and religions. Each region
-                has its own unique identity and traditions that are celebrated through festivals and daily life. Here
-                are some highlights:</p>
-            <ul>
-                <li><i>Classical Dances:</i> Bharatanatyam, Kathak, and Odissi.</li>
-                <li><i>Music:</i> Traditional instruments like the sitar, tabla, and veena.</li>
-                <li><i>Festivals:</i> Diwali, Holi, Eid, and Christmas bring people together in celebration.</li>
-            </ul>
-            <figure style="text-align: center;">
-                <!-- Classical dance image -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Chhau_dance.jpg" title="CLASSICAL DANCE"
-                    alt="Indian Classical Dance" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>A glimpse of Indian Classical Dance.</figcaption>
-            </figure>
-        </section>
+            <!-- Indian Culture Section -->
+            <section>
+                <h2>Indian Culture</h2>
+                <p>India's <b>cultural heritage</b> is a blend of various traditions, languages, and religions. Each
+                    region
+                    has its own unique identity and traditions that are celebrated through festivals and daily life.
+                    Here
+                    are some highlights:</p>
+                <ul>
+                    <li><i>Classical Dances:</i> Bharatanatyam, Kathak, and Odissi.</li>
+                    <li><i>Music:</i> Traditional instruments like the sitar, tabla, and veena.</li>
+                    <li><i>Festivals:</i> Diwali, Holi, Eid, and Christmas bring people together in celebration.</li>
+                </ul>
+                <figure style="text-align: center;">
+                    <!-- Classical dance image -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Chhau_dance.jpg"
+                        title="CLASSICAL DANCE" alt="Indian Classical Dance" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>A glimpse of Indian Classical Dance.</figcaption>
+                </figure>
+            </section>
 
-        <!-- Delicious Indian Cuisine Section -->
-        <section>
-            <h2>Delicious Indian Cuisine</h2>
-            <p>Indian food is as diverse as its culture. From the fiery curries of the south to the hearty bread of the
-                north, there's something for everyone. Popular dishes include:</p>
-            <ul>
-                <li><b>North Indian:</b> Butter chicken, naan, and paneer tikka.</li>
-                <li><b>South Indian:</b> Dosa, idli, and sambhar.</li>
-                <li><b>Street Food:</b> Pani puri, chaat, and vada pav.</li>
-            </ul>
-            <figure style="text-align: center;">
-                <!-- Biryani image -->
-                <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/HX/AM/DW/38411130/product-jpeg.jpeg"
-                    title="BIRYANI" alt="Hyderabad Biryani" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>Delicious Hyderabad Biryani.</figcaption>
-            </figure>
-            <figure style="text-align: center;">
-                <!-- Street food image -->
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQi0WnsQwT27Us60W_DnHnQIuEIMEwtjmGtdIz85NrwgKY3d7lm"
-                    title="STREET FOOD" alt="Indian Street Food" width="300" height="200"
-                    style="border-radius: 10px; border: 2px dotted;">
-                <figcaption>Colorful and flavorful Indian street food.</figcaption>
-            </figure>
-        </section>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </main>
-    <br>
-    <hr>
+            <!-- Delicious Indian Cuisine Section -->
+            <section>
+                <h2>Delicious Indian Cuisine</h2>
+                <p>Indian food is as diverse as its culture. From the fiery curries of the south to the hearty bread of
+                    the
+                    north, there's something for everyone. Popular dishes include:</p>
+                <ul>
+                    <li><b>North Indian:</b> Butter chicken, naan, and paneer tikka.</li>
+                    <li><b>South Indian:</b> Dosa, idli, and sambhar.</li>
+                    <li><b>Street Food:</b> Pani puri, chaat, and vada pav.</li>
+                </ul>
+                <figure style="text-align: center;">
+                    <!-- Biryani image -->
+                    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/HX/AM/DW/38411130/product-jpeg.jpeg"
+                        title="BIRYANI" alt="Hyderabad Biryani" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>Delicious Hyderabad Biryani.</figcaption>
+                </figure>
+                <figure style="text-align: center;">
+                    <!-- Street food image -->
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQi0WnsQwT27Us60W_DnHnQIuEIMEwtjmGtdIz85NrwgKY3d7lm"
+                        title="STREET FOOD" alt="Indian Street Food" width="300" height="200"
+                        style="border-radius: 10px; border: 2px dotted;">
+                    <figcaption>Colorful and flavorful Indian street food.</figcaption>
+                </figure>
+            </section>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </main>
+        <br>
+        <hr>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
-        <p style="text-align: center;">
-            Follow Us On:
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="https://store-images.s-microsoft.com/image/apps.30645.9007199266245907.cb06f1f9-9154-408e-b4ef-d19f2325893b.ac3b465e-4384-42a8-9142-901c0405e1bc"
-                    alt="Facebook" style="height: 24px;">
-                Facebook
-            </a>
-            <!-- Removed the extra closing </a> tag -->
-            <a href="https://www.twitter.com" target="_blank">
-                <img src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_400x400.jpg" alt="Twitter"
-                    style="height: 24px;">
-                Twitter
-            </a>
-        </p>
-        <address style="text-align: center;">
-            Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
-        </address>
-    </footer>
-    <!-- Closed the body tag after all content -->
-</div>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
+            <p style="text-align: center;">
+                Follow Us On:
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://store-images.s-microsoft.com/image/apps.30645.9007199266245907.cb06f1f9-9154-408e-b4ef-d19f2325893b.ac3b465e-4384-42a8-9142-901c0405e1bc"
+                        alt="Facebook" style="height: 24px;">
+                    Facebook
+                </a>
+                <!-- Removed the extra closing </a> tag -->
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_400x400.jpg"
+                        alt="Twitter" style="height: 24px;">
+                    Twitter
+                </a>
+            </p>
+            <address style="text-align: center;">
+                Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
+            </address>
+        </footer>
+        <!-- Closed the body tag after all content -->
+    </div>
 </body>
 
 </html>
