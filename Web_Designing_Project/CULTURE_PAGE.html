@@ -13,23 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #FFFFE0;
+            background-color: #ffffff;
             /*background-image: linear-gradient( orange , white, green);*/
         }
 
         /* Base styling for the body */
         .body {
             font-family: 'Poppins', sans-serif;
-            margin: 5% 5% 0% 5%;
+            margin: 5% 0% 0% 0%;
             padding: 0;
             margin-bottom: 5%;
-            /*background-image: linear-gradient( orange , white, green);*/
-            background-color: #FFFFE0;
+            background-color: #ffffff;
+        }
+
+        .main {
+            margin: 0% 5% 5% 5%;
         }
 
         a:hover {
-            font-size: 30px;
-            color: orangered;
+            font-size: 20px;
             transition: 1s;
         }
 
@@ -39,16 +41,9 @@
             background-color: black;
             color: whitesmoke;
             bottom: 0%;
+            /* Positions the div at the bottom */
             text-align: center;
             width: 100%;
-        }
-        figure {
-            transition: transform 0.3s;
-
-        }
-
-        figure:hover {
-            transform: scale(1.1);
         }
 
         /* Styling for the fixed text at the top */
@@ -56,17 +51,21 @@
             position: fixed;
             background-color: rgb(233, 17, 17);
             color: whitesmoke;
-            top: 0%;
+            top: 91%;
             /* Positions the div at the top */
             padding-right: 10px;
         }
 
-        /* Navigation menu styles */
+        /* Navigation bar styling */
         .Navigation {
             text-align: center;
             padding: 1% 0;
             font-size: medium;
             background-color: #F0F0F0;
+            position: fixed;
+            top: 0%;
+            width: 100%;
+            z-index:500 ;
         }
 
         .Navigation a {
@@ -76,11 +75,92 @@
             margin-right: 2%;
             padding-left: 2%;
         }
+
+        /* Centering header elements */
+        .header h1 {
+            text-align: center;
+        }
+
+        .header p {
+            text-align: center;
+        }
+
+        /* Footer link styling */
+        .Footer a {
+            text-decoration: none;
+            color: #0000FF;
+            /* Blue text color */
+        }
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            /* Centers the table horizontally */
+            width: 80%;
+            /* Adjusts the table width */
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        @media screen and (min-width: 375px) and (max-width: 975px ) {
+            .body {
+                margin: 65px 0px 70px 0px;
+            }
+
+            .main {
+                margin: 0 3% 3% 3%;
+            }
+
+            .Navigation {
+                padding: 2%;
+                font-size: small;
+            }
+
+           
+            .fixed-text {
+                font-size: 12px;
+                padding: 2px;
+            }
+
+            .fixed-text_ {
+                top: 85%;
+                font-size: 14px;
+            }
+
+            form table {
+                width: 100%;
+            }
+
+            form td {
+                display: block;
+                width: 100%;
+                margin: 5px 0;
+            }
+            .chatbot img {
+                width: 40px;
+                height: 40px;
+                bottom: 60px;
+            }
+
+            .footer{
+                margin-bottom: 30px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    
+
     <!-- Fixed text at the bottom -->
     <div class="fixed-text">
         Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
@@ -91,7 +171,8 @@
 
     <!-- Fixed text at the top -->
     <div class="fixed-text_">
-        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Book Your Travel</a>
+        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Book Your
+            Travel</a>
     </div>
     <div class="chaatbot">
         <a href="https://chatgpt.com/" target="_self">
@@ -114,15 +195,13 @@
                 <a href="LANDMARKS_PAGE.html">Landmarks</a>
                 <a href="CUISINE_PAGE.html">Cuisine</a>
                 <a href="CONTACT_US_PAGE.html">Contact Us</a>
-                <input type="text" placeholder="Search.." style="position: fixed; top: 20px; right: 20px;">
             </nav>
         </div>
-        <br>
         <hr>
-        <br>
+
 
         <!-- Main content area -->
-        <main>
+        <main class="main">
             <!-- Section for Indian culture -->
             <section>
                 <h2>Indian Culture</h2>
