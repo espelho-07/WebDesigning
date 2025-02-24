@@ -8,9 +8,412 @@
     <title>Project Hub</title>
 
      <!-- Import Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+}
+
+.fixed-text {
+    position: fixed;
+    background-color: #0a0a0a;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .projects-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .projects-list li {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #007bff;
+        }
+
+.intro {
+    background-color: #e5e5e5;
+    color: #0a0a0a;
+    margin:1%;
+    margin-left: 6%;
+    display: flex;/* Align children side by side */
+}
+
+.into1 {
+    color: #0a0a0a;
+    margin-right: 3%;
+}
+
+/* Submit Section */
+.Submit {
+    background-color: #fff; /* White for cleanliness */
+    color: #264653;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    max-width: 1100px; /* Slightly wider for balance */
+    margin: 80px auto 20px; /* Space for fixed bar */
+    padding: 30px;
+    background-color: #D3D0CB; /* White for contrast */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+}
+
+/* Projects List */
+.projects-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+}
+
+.projects-list li {
+    font-size: 20px;
+    margin: 10px 20px; /* More spacing */
+    padding: 8px 16px;
+    background-color: #2A9D8F; /* Primary color */
+    color: #fff;
+    border-radius: 20px; /* Rounded tags */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
+}
+
+.projects-list li:hover {
+    transform: scale(1.05); /* Slight zoom */
+    background-color: #E9C46A; /* Accent on hover */
+}
+
+.Submit input[type="submit"] {
+    background-color: #E9C46A; /* Warm accent */
+    color: #264653;
+    padding: 12px 25px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.Submit input[type="submit"]:hover {
+    background-color: #2A9D8F; /* Primary color on hover */
+    transform: translateY(-2px); /* Lift effect */
+    color: #fff;
+}
+
+.vertical-navbar {
+    margin-top: 3%;
+    width: 60px;
+    background-color: #0a0a0a;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s;
+    z-index: 1000;
+}
+
+.vertical-navbar:hover {
+    width: 170px;
+}
+
+.vertical-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-navbar li {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.vertical-navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.vertical-navbar a:hover {
+    background-color: #1f80e0;
+}
+
+.vertical-navbar a .icon {
+    width: 40px;
+    height: 40px;
+}
+
+.vertical-navbar a span {
+    margin-left: 10px;
+    display: none;
+}
+
+.vertical-navbar:hover a span {
+    display: inline;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a;
+    margin-left: 3.7%;
+    color: #d3d3d3;
+    padding: 40px 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 500;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #32c766; /* HackerRank-inspired green */
+    text-decoration: underline;
+}
+
+/* Branding Section */
+.footer-branding img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-branding p {
+    font-size: 12px;
+}
+
+/* Social Icons */
+.social-icons {
+    height: 1px;
+    width: 1px;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #d3d3d3;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #32c766;
+}
+
+/* Divider */
+.divider {
+    border-top: 1px solid #333333;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+            .fixed-text {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .vertical-navbar {
+                width: 50px;
+            }
+
+            .vertical-navbar:hover {
+                width: 140px;
+            }
+
+            .intro {
+                margin-left: 60px;
+                text-align: center;
+            }
+
+            .intro p {
+                font-size: 80px !important; /* Adjust title */
+            }
+
+            .intro p:nth-child(2) {
+                font-size: 24px !important; /* Adjust subtitle */
+            }
+
+            .container {
+                margin: 50px 10px 20px;
+                padding: 20px;
+            }
+
+            .projects-list li {
+                margin: 8px 10px;
+                font-size: 18px;
+            }
+
+            .Submit {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .into1 img {
+                width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .into1 p {
+                text-align: center !important;
+                font-size: 24px !important;
+                padding: 10px !important;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                padding-left: 0;
+            }
+
+            .footer-column {
+                margin-bottom: 20px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .intro p {
+                font-size: 50px !important;
+            }
+
+            .intro p:nth-child(2) {
+                font-size: 18px !important;
+            }
+
+            .container {
+                margin: 40px 5px 10px;
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .projects-list li {
+                font-size: 16px;
+                padding: 6px 12px;
+            }
+
+            .Submit input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .footer-column h3 {
+                font-size: 14px;
+            }
+
+            .footer-column ul li a {
+                font-size: 12px;
+            }
+
+            .social-icons a img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="fixed-text" style="margin-left: 0%; margin-right: 0%;">
@@ -32,19 +435,8 @@
     </header>
     
     <div class="intro">
-        <p style="text-align: center; font-weight: bolder; font-family: 'Poppins', sans-serif;font-size: 120px;margin-left: 5%;margin-top: 5%;padding: 10px;">Project Hub</p>
+        <p style="text-align: center; font-weight: bolder; font-family: 'Poppins', sans-serif;font-size: 80px;margin-left: 5%;margin-top: 5%;padding: 10px;">Project Hub</p>
         <p style="text-align: center; font-weight: lighter; font-family: 'Poppins', sans-serif; font-size: xx-large; opacity: 0.5; padding: 1px;margin-top: 15%;">Where Your Thinking Meet's Reality</p>
-    </div>
-
-    <div class="into1">
-        <div>
-            <figure>
-                <img src="https://miro.medium.com/v2/resize:fit:1068/1*8FyJoLZ5EyZHNJFSZZVQRA.jpeg" style="clear: both; border-radius: 50px;height: auto;width: 60%;float: left;margin-left: 2%;">
-            </figure>
-        </div>
-        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 30px; margin: 5px; padding: 19px;">Code It,</p>
-        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 50px; margin: 5px; padding: 19px;">Challenge It,</p>
-        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 70px; margin: 5px; padding: 19px;">And Master It.</p>
     </div>
 
      <div class="container">
@@ -61,13 +453,86 @@
         </ul>
     </div>
 
+    <div class="into1">
+        <div>
+            <figure>
+                <img src="https://miro.medium.com/v2/resize:fit:1068/1*8FyJoLZ5EyZHNJFSZZVQRA.jpeg" style="clear: both; border-radius: 50px;height: auto;width: 60%;float: left;margin-left: 2%;">
+            </figure>
+        </div>
+        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 30px; margin: 5px; padding: 19px;">Code It,</p>
+        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 50px; margin: 0px; padding: 19px;">Challenge It,</p>
+        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 70px; margin: 0px; padding: 19px;">And Master It.</p>
+    </div>
+
     <div class="Submit" style="background-color: #cce3de; padding: 20px; border-radius: 20px; width: 80%; margin: auto;">
         <p style="text-align: left; font-weight:bolder; font-family: 'Poppins', sans-serif; font-size: 30px; margin-left: 5%; padding: 10px; color: #333;">Submit Project</p>
         <p style="text-align: left; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 20px; margin-left: 5%; padding: 1px; color: #666;">Don't Think Much We Are With You,</p>
         <p style="text-align: left; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 20px; margin-left: 5%; padding: 1px; color: #666;">Would you like to contribute your own projects to Projects Hub? Share your project with us and we will work with you to feature it here.</p>
         <input type="submit" value="Submit" style="margin-left: 5%; padding: 10px 20px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: bold; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">
     </div>
-    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <footer>
+        <div class="divider"></div>
+        <div class="footer-container">
+            <!-- Branding Column -->
+            <div class="footer-column footer-branding">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s" alt="projecthub" class="icon">
+                <p>© 2025 Espelho. All rights reserved.</p>
+            </div>
+
+            <!-- Company Column -->
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Products Column -->
+            <div class="footer-column">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources Column -->
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Social Column -->
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg" alt="Twitter" style="height: 30px;width: 30px;"></a> <!-- Twitter Icon -->
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYS1PFxKVoAjQIkCCEXn3XOiTNbfM5K_aEug&s" alt="Lined in" style="height: 30px;width: 30px;"></a> <!-- LinkedIn Icon  -->
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMzEkaAN0BJ2o3ri2IsQRKXVk6ejQQqz0GUg&s" alt="GitHub" style="height: 30px;width: 30px;"></a> <!-- GitHub Icon  -->
+                </div>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
