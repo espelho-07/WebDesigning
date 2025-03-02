@@ -12,19 +12,135 @@
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General and Background Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG7izHUeqPUOsZtBABAMXCALP6w0Y0t5n4BA&s);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #f9e4b7, #d4e4e9);
+            background-image: linear-gradient( orange , white, green);
+            /* Warm cream to soft teal */
             font-family: 'Poppins', sans-serif;
-            font: 100;
-            color: bisque;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%);
+            background-size: 25px 25px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            text-align: center;
+            z-index: 2;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            max-width: 650px;
+            position: relative;
+            margin-top: 20px;
+            /* Moved to top with small margin */
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .main-content img {
+            width: 220px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 4px solid #e8b923;
+            /* Golden yellow border */
+            transition: transform 0.3s ease;
+        }
+
+        .main-content img:hover {
+            transform: scale(1.05);
+        }
+
+        .main-content h1 {
+            font-size: 2.7rem;
+            color: #3a5f56;
+            /* Deep teal green */
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .main-content p {
+            font-size: 1.3rem;
+            color: #5b4636;
+            /* Warm earthy brown */
+            line-height: 1.6;
+        }
+
+        /* Footer Styles */
+        footer {
+            position: absolute;
+            bottom: 25px;
+            color: #e8b923;
+            /* Golden yellow */
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        /* Animation for Main Content */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                max-width: 90%;
+                padding: 20px;
+                margin-top: 15px;
+                /* Smaller margin for mobile */
+            }
+
+            .main-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .main-content img {
+                width: 180px;
+            }
+
+            .main-content p {
+                font-size: 1.1rem;
+            }
+
+            footer {
+                font-size: 1rem;
+            }
         }
 
         .hey1 {
-            background-color:#e5e5e5;
+            background-color: #e5e5e5;
             height: 50px;
             width: 50px;
             border-radius: 100px;
@@ -485,7 +601,7 @@
             }
 
             100% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(100% - 50px);
                 left: calc(70% - 50px);
 
@@ -503,7 +619,7 @@
             }
 
             50% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(50% - 50px);
                 left: calc(65% - 50px);
 
@@ -521,14 +637,14 @@
 
         @keyframes hey12 {
             0% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(45% - 50px);
                 left: calc(65% - 50px);
 
             }
 
             50% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(60% - 50px);
                 left: calc(65% - 50px);
 
@@ -606,7 +722,7 @@
             }
 
             50% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(80% - 50px);
                 left: calc(70% - 50px);
 
@@ -614,7 +730,7 @@
             }
 
             100% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(100% - 50px);
                 left: calc(70% - 50px);
 
@@ -640,7 +756,7 @@
             }
 
             100% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(100% - 50px);
                 left: calc(65% - 50px);
 
@@ -657,7 +773,7 @@
             }
 
             50% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(50% - 50px);
                 left: calc(30% - 50px);
             }
@@ -684,7 +800,7 @@
             }
 
             100% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(100% - 50px);
                 left: calc(30% - 50px);
             }
@@ -766,7 +882,7 @@
             }
 
             50% {
-               background-color: rgb(248, 248, 248);
+                background-color: rgb(248, 248, 248);
                 top: calc(60% - 50px);
                 left: calc(45% - 50px);
 
@@ -786,8 +902,16 @@
 </head>
 
 <body>
-    <figure style="text-align: center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRWxnXFIiB-p7cCuDtdklSCCk5q89jybmAoT54o2A0T2nDqi-T4VZ2ZKi4rlZUBYTkA&usqp=CAU"></figure>
-    <div style="text-align: center;"><p ><h1>Hello Welcome To Incredible India!</h1></p></div>
+    <figure style="text-align: center;"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRWxnXFIiB-p7cCuDtdklSCCk5q89jybmAoT54o2A0T2nDqi-T4VZ2ZKi4rlZUBYTkA&usqp=CAU">
+    </figure>
+    <!-- Main Content -->
+    <div class="main-content">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRWxnXFIiB-p7cCuDtdklSCCk5q89jybmAoT54o2A0T2nDqi-T4VZ2ZKi4rlZUBYTkA&usqp=CAU"
+            alt="Incredible India">
+        <h1>Welcome to Incredible India</h1>
+        <p>Explore the vibrant culture, stunning landscapes, and timeless traditions of India.</p>
+    </div>
     <div class="Ball">
         <div class="hey1"></div>
         <div class="hey2"></div>
@@ -812,7 +936,11 @@
         <div class="hey21"></div>
         <div class="hey22"></div>
     </div>
-    <footer style="text-align: center;"><h3>The Only Websiite You Needed To Explore India!!</h3></footer>
-    
+    <!-- Footer -->
+    <footer>
+        <h3>Stay and Uncover India’s Treasures</h3>
+    </footer>
+
 </body>
+
 </html>
