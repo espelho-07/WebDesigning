@@ -3,489 +3,579 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s">
     <title>Project Hub</title>
 
-     <!-- Import Google Fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
         body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    /* Stack children vertically */
-}
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-.fixed-text {
-    position: fixed;
-    background-color: #0a0a0a;
-    margin: 0;
-    color: #ffffff;
-    text-align: center;
-    font-size: 15px;
-    padding: 10px;
-}
+        /* Fixed Top Bar */
+        .fixed-text {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0a0a0a;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .fixed-text a {
+            color: #ff5555;
+            text-decoration: none;
+        }
 
-.container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Vertical Navbar */
+        .vertical-navbar {
+            width: 60px;
+            background-color: #0a0a0a;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: width 0.3s;
+            z-index: 1000;
+        }
+        .vertical-navbar:hover {
+            width: 170px;
+        }
+        .vertical-navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .vertical-navbar li {
+            margin: 20px 0;
+            width: 100%;
+        }
+        .vertical-navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .vertical-navbar a:hover {
+            background-color: #1f80e0;
+        }
+        .vertical-navbar a .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        .vertical-navbar a span {
+            margin-left: 10px;
+            display: none;
+        }
+        .vertical-navbar:hover a span {
+            display: inline;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 60px;
+            padding-top: 60px;
+        }
+
+        /* Hero Section */
+        .intro {
+            background-color: #e5e5e5;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .intro h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            color: #0a0a0a;
+        }
+        .intro p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        /* Projects Section */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
         }
         .title {
             text-align: center;
             font-size: 36px;
             font-weight: 600;
             margin-bottom: 20px;
+            color: #264653;
         }
         .subtitle {
             text-align: center;
             font-size: 18px;
             font-weight: 300;
             margin-bottom: 40px;
-        }
-        .projects-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .projects-list li {
-            font-size: 20px;
-            margin: 10px 0;
+            color: #666;
         }
         .highlight {
             font-weight: 600;
             color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .projects-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .projects-list li {
+            font-size: 20px;
+            margin: 10px 20px;
+            padding: 8px 16px;
+            background-color: #2A9D8F;
+            color: #fff;
+            border-radius: 20px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .projects-list li:hover {
+            transform: scale(1.05);
+            background-color: #E9C46A;
         }
 
-.intro {
-    background-color: #e5e5e5;
-    color: #0a0a0a;
-    margin:1%;
-    margin-left: 6%;
-    display: flex;/* Align children side by side */
-}
+        /* Motivation Section */
+        .into1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: #cce3de;
+            margin: 40px 0;
+        }
+        .into1 img {
+            width: 40%;
+            border-radius: 20px;
+        }
+        .into1 div {
+            text-align: right;
+        }
+        .into1 p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            color: #333;
+        }
+        .into1 p:nth-child(1) { font-size: 30px; }
+        .into1 p:nth-child(2) { font-size: 50px; }
+        .into1 p:nth-child(3) { font-size: 70px; }
 
-.into1 {
-    color: #0a0a0a;
-    margin-right: 3%;
-}
+        /* Submit Section */
+        .Submit {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            width: 80%;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .Submit h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .Submit p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .Submit input[type="submit"] {
+            background-color: #E9C46A;
+            color: #264653;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .Submit input[type="submit"]:hover {
+            background-color: #2A9D8F;
+            transform: translateY(-2px);
+            color: #fff;
+        }
 
-/* Submit Section */
-.Submit {
-    background-color: #fff; /* White for cleanliness */
-    color: #264653;
-    padding: 30px;
-    border-radius: 20px;
-    width: 80%;
-    margin: 40px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
+        /* Contact Section */
+        .Reply {
+            background-color: #cce3de;
+            padding: 30px;
+            border-radius: 20px;
+            width: 80%;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .Reply h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .Reply p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .Reply input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .Reply input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
 
-.container {
-    max-width: 1100px; /* Slightly wider for balance */
-    margin: 80px auto 20px; /* Space for fixed bar */
-    padding: 30px;
-    background-color: #D3D0CB; /* White for contrast */
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
-}
+        /* FAQ Section */
+        .faq-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .faq-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #264653;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            font-size: 24px;
+            font-weight: 600;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #e0e0e0;
+        }
+        .faq-answer {
+            display: none;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
 
-/* Projects List */
-.projects-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center;
-}
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #d3d3d3;
+            padding: 40px 20px;
+            width: 100%;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 150px;
+        }
+        .footer-column h3 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: #d3d3d3;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: #32c766;
+            text-decoration: underline;
+        }
+        .footer-branding img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .footer-branding p {
+            font-size: 12px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+        .divider {
+            border-top: 1px solid #333;
+            margin: 20px 0;
+        }
 
-.projects-list li {
-    font-size: 20px;
-    margin: 10px 20px; /* More spacing */
-    padding: 8px 16px;
-    background-color: #2A9D8F; /* Primary color */
-    color: #fff;
-    border-radius: 20px; /* Rounded tags */
-    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
-}
-
-.projects-list li:hover {
-    transform: scale(1.05); /* Slight zoom */
-    background-color: #E9C46A; /* Accent on hover */
-}
-
-.Submit input[type="submit"] {
-    background-color: #E9C46A; /* Warm accent */
-    color: #264653;
-    padding: 12px 25px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.Submit input[type="submit"]:hover {
-    background-color: #2A9D8F; /* Primary color on hover */
-    transform: translateY(-2px); /* Lift effect */
-    color: #fff;
-}
-
-.vertical-navbar {
-    margin-top: 3%;
-    width: 60px;
-    background-color: #0a0a0a;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: width 0.3s;
-    z-index: 1000;
-}
-
-.vertical-navbar:hover {
-    width: 170px;
-}
-
-.vertical-navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.vertical-navbar li {
-    margin: 20px 0;
-    width: 100%;
-}
-
-.vertical-navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    transition: background-color 0.3s;
-}
-
-.vertical-navbar a:hover {
-    background-color: #1f80e0;
-}
-
-.vertical-navbar a .icon {
-    width: 40px;
-    height: 40px;
-}
-
-.vertical-navbar a span {
-    margin-left: 10px;
-    display: none;
-}
-
-.vertical-navbar:hover a span {
-    display: inline;
-}
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #1a1a1a;
-    margin-left: 3.7%;
-    color: #d3d3d3;
-    padding: 40px 20px;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    z-index: 500;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 150px;
-}
-
-.footer-column h3 {
-    color: #ffffff;
-    font-size: 16px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-    color: #d3d3d3;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-    color: #32c766; /* HackerRank-inspired green */
-    text-decoration: underline;
-}
-
-/* Branding Section */
-.footer-branding img {
-    max-width: 100px;
-    margin-bottom: 10px;
-}
-
-.footer-branding p {
-    font-size: 12px;
-}
-
-/* Social Icons */
-.social-icons {
-    height: 1px;
-    width: 1px;
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color: #d3d3d3;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #32c766;
-}
-
-/* Divider */
-.divider {
-    border-top: 1px solid #333333;
-    margin-bottom: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-@media (max-width: 768px) {
-            .fixed-text {
-                font-size: 12px;
-                padding: 8px;
-            }
-
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .vertical-navbar {
                 width: 50px;
             }
-
             .vertical-navbar:hover {
                 width: 140px;
             }
-
-            .intro {
-                margin-left: 60px;
-                text-align: center;
+            .main-content {
+                margin-left: 50px;
             }
-
+            .intro h1 {
+                font-size: 50px;
+            }
             .intro p {
-                font-size: 80px !important; /* Adjust title */
-            }
-
-            .intro p:nth-child(2) {
-                font-size: 24px !important; /* Adjust subtitle */
-            }
-
-            .container {
-                margin: 50px 10px 20px;
-                padding: 20px;
-            }
-
-            .projects-list li {
-                margin: 8px 10px;
                 font-size: 18px;
             }
-
-            .Submit {
-                width: 90%;
-                padding: 15px;
+            .into1 {
+                flex-direction: column;
+                text-align: center;
             }
-
             .into1 img {
                 width: 80%;
-                margin: 0 auto;
-                display: block;
+                margin-bottom: 20px;
             }
-
-            .into1 p {
-                text-align: center !important;
-                font-size: 24px !important;
-                padding: 10px !important;
+            .into1 div {
+                text-align: center;
             }
-
+            .Submit, .Reply {
+                width: 90%;
+            }
             .footer-container {
                 flex-direction: column;
                 text-align: center;
-                padding-left: 0;
             }
-
-            .footer-column {
-                margin-bottom: 20px;
-            }
-
             .social-icons {
                 justify-content: center;
             }
         }
 
         @media (max-width: 480px) {
+            .intro h1 {
+                font-size: 36px;
+            }
             .intro p {
-                font-size: 50px !important;
+                font-size: 16px;
             }
-
-            .intro p:nth-child(2) {
-                font-size: 18px !important;
-            }
-
-            .container {
-                margin: 40px 5px 10px;
-                padding: 15px;
-            }
-
             .title {
                 font-size: 28px;
             }
-
             .subtitle {
                 font-size: 16px;
             }
-
             .projects-list li {
                 font-size: 16px;
                 padding: 6px 12px;
             }
-
-            .Submit input[type="submit"] {
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-
-            .footer-column h3 {
-                font-size: 14px;
-            }
-
-            .footer-column ul li a {
-                font-size: 12px;
-            }
-
-            .social-icons a img {
-                width: 24px;
-                height: 24px;
-            }
+            .into1 p:nth-child(1) { font-size: 20px; }
+            .into1 p:nth-child(2) { font-size: 30px; }
+            .into1 p:nth-child(3) { font-size: 40px; }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqQuestions = document.querySelectorAll(".faq-question");
+            faqQuestions.forEach((question) => {
+                question.addEventListener("click", function () {
+                    const answer = this.nextElementSibling;
+                    answer.style.display = (answer.style.display === "block") ? "none" : "block";
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <div class="fixed-text" style="margin-left: 0%; margin-right: 0%;">
-        Welcome to the Website Where You Practice And Learn The Only Portal For Computer Engineers! While we are continuously updating and improving the site,
-        we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
-        <a href="mailto:info.mot@gov.in" style="color: red;">info.projecthub@darshan.in</a>.
-    </div>
-    <header>
-        <nav class="vertical-navbar">
-            <ul>
-                <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s" alt="projecthub" class="icon"> <span></span></a></li>
-                <li><a href="#"><img src="https://i.pinimg.com/736x/62/ef/57/62ef576e2f7f55eb3d520cc036d13e5e.jpg" alt="Home" class="icon"> <span>Home</span></a></li>
-                <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkNAE5doFj-7fsCIDX-CmeJ3PPxDh50cOkxQ&s" alt="Projects" class="icon" style="border-radius: 10px;"> <span>Projects</span></a></li>
-                <li><a href="#"><img src="https://t4.ftcdn.net/jpg/07/83/20/91/360_F_783209193_v9B8ydrpfT1VCh9PWeQD9GLTXvGAR1Xy.jpg" alt="Create" class="icon"> <span>Create</span></a></li>
-                <li><a href="#"><img src="https://cdn1.vectorstock.com/i/1000x1000/38/65/newspaper-sign-orange-icon-on-black-background-vector-13393865.jpg" alt="News" class="icon"> <span>News</span></a></li>
-                <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR_xAPdn4D2lDWQoR7GaN1EZyp3AV4GynmFQ&s" alt="About Us" class="icon" > <span>About Us</span></a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="intro">
-        <p style="text-align: center; font-weight: bolder; font-family: 'Poppins', sans-serif;font-size: 80px;margin-left: 5%;margin-top: 5%;padding: 10px;">Project Hub</p>
-        <p style="text-align: center; font-weight: lighter; font-family: 'Poppins', sans-serif; font-size: xx-large; opacity: 0.5; padding: 1px;margin-top: 15%;">Where Your Thinking Meet's Reality</p>
+    <div class="fixed-text">
+        Welcome to the Website Where You Practice And Learn The Only Portal For Computer Engineers! While we are continuously updating and improving the site, we would love to hear your suggestions. Please share your feedback at <a href="mailto:info.projecthub@darshan.in">info.projecthub@darshan.in</a>.
     </div>
 
-     <div class="container">
-        <h1 class="title">Welcome to Project Hub: Your Ultimate Destination for CSE Projects!</h1>
-        <p class="subtitle">At Project Hub, we empower students to unlock their full potential by providing a wide range of Computer Science and Engineering (CSE) projects. Whether you're a beginner looking to get hands-on experience or an advanced learner seeking new challenges, our platform offers curated projects across multiple programming languages to help you grow and succeed. Dive in, explore, and start building your future with Project Hub!</p>
-        <h2 class="highlight">Explore Projects in:</h2>
-        <ul class="projects-list">
-            <li>Python</li>
-            <li>Java</li>
-            <li>C++</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>And many more!</li>
+    <nav class="vertical-navbar">
+        <ul>
+            <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s" alt="ProjectHub" class="icon"><span></span></a></li>
+            <li><a href="#"><img src="https://i.pinimg.com/736x/62/ef/57/62ef576e2f7f55eb3d520cc036d13e5e.jpg" alt="Home" class="icon"><span>Home</span></a></li>
+            <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tb n:ANd9GcSkNAE5doFj-7fsCIDX-CmeJ3PPxDh50cOkxQ&s" alt="Projects" class="icon"><span>Projects</span></a></li>
+            <li><a href="#"><img src="https://t4.ftcdn.net/jpg/07/83/20/91/360_F_783209193_v9B8ydrpfT1VCh9PWeQD9GLTXvGAR1Xy.jpg" alt="Create" class="icon"><span>Create</span></a></li>
+            <li><a href="#"><img src="https://cdn1.vectorstock.com/i/1000x1000/38/65/newspaper-sign-orange-icon-on-black-background-vector-13393865.jpg" alt="News" class="icon"><span>News</span></a></li>
+            <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR_xAPdn4D2lDWQoR7GaN1EZyp3AV4GynmFQ&s" alt="About Us" class="icon"><span>About Us</span></a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="into1">
-        <div>
-            <figure>
-                <img src="https://miro.medium.com/v2/resize:fit:1068/1*8FyJoLZ5EyZHNJFSZZVQRA.jpeg" style="clear: both; border-radius: 50px;height: auto;width: 60%;float: left;margin-left: 2%;">
-            </figure>
-        </div>
-        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 30px; margin: 5px; padding: 19px;">Code It,</p>
-        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 50px; margin: 0px; padding: 19px;">Challenge It,</p>
-        <p style="text-align: right; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 70px; margin: 0px; padding: 19px;">And Master It.</p>
-    </div>
+    <div class="main-content">
+        <section class="intro">
+            <h1>Project Hub</h1>
+            <p>Where Your Thinking Meets Reality</p>
+        </section>
 
-    <div class="Submit" style="background-color: #cce3de; padding: 20px; border-radius: 20px; width: 80%; margin: auto;">
-        <p style="text-align: left; font-weight:bolder; font-family: 'Poppins', sans-serif; font-size: 30px; margin-left: 5%; padding: 10px; color: #333;">Submit Project</p>
-        <p style="text-align: left; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 20px; margin-left: 5%; padding: 1px; color: #666;">Don't Think Much We Are With You,</p>
-        <p style="text-align: left; font-weight:lighter; font-family: 'Poppins', sans-serif; font-size: 20px; margin-left: 5%; padding: 1px; color: #666;">Would you like to contribute your own projects to Projects Hub? Share your project with us and we will work with you to feature it here.</p>
-        <input type="submit" value="Submit" style="margin-left: 5%; padding: 10px 20px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: bold; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">
-    </div>
+        <section class="container">
+            <h1 class="title">Welcome to Project Hub</h1>
+            <p class="subtitle">Your ultimate destination for CSE projects! Empowering students to unlock their potential with curated Computer Science and Engineering projects across multiple programming languages.</p>
+            <h2 class="highlight">Explore Projects in:</h2>
+            <ul class="projects-list">
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>And many more!</li>
+            </ul>
+        </section>
 
-    <br>
-    <br>
-    <hr>
-    <br>
+        <section class="into1">
+            <img src="https://miro.medium.com/v2/resize:fit:1068/1*8FyJoLZ5EyZHNJFSZZVQRA.jpeg" alt="Code Motivation">
+            <div>
+                <p>Code It,</p>
+                <p>Challenge It,</p>
+                <p>And Master It.</p>
+            </div>
+        </section>
+
+        <section class="Submit">
+            <h2>Submit Your Project</h2>
+            <p>Don't think much, we are with you!</p>
+            <p>Contribute your own projects to Project Hub and we’ll feature them here.</p>
+            <input type="submit" value="Submit">
+        </section>
+
+        <section class="Reply">
+            <h2>Didn’t Find What You Need? 😕</h2>
+            <p>Mail us, we’ll help you out! 😉</p>
+            <p>Send your query, and we’ll reach out with a solution.</p>
+            <input type="submit" value="Contact Us">
+        </section>
+
+        <section class="faq-container">
+            <h1 class="faq-title">Frequently Asked Questions (FAQ)</h1>
+            <div class="faq-item">
+                <button class="faq-question">What is Project Hub?</button>
+                <div class="faq-answer">Project Hub is a platform designed for students to access a variety of Computer Science and Engineering (CSE) projects to enhance their programming skills.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">How do I get started with a project?</button>
+                <div class="faq-answer">Browse our project list, select one that matches your interests and career goals, and follow the detailed instructions provided.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">Are the projects suitable for beginners?</button>
+                <div class="faq-answer">Yes, we offer projects for all skill levels, from beginners to advanced learners.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">Can I contribute my own projects?</button>
+                <div class="faq-answer">Absolutely! Submit your project via the "Submit Project" section.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">Is there any cost to use Project Hub?</button>
+                <div class="faq-answer">No, Project Hub is completely free for all students.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">What programming languages are supported?</button>
+                <div class="faq-answer">We support Python, Java, C++, JavaScript, HTML/CSS, and more.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">How can I get help if I'm stuck?</button>
+                <div class="faq-answer">Reach out via our community forums or contact our support team.</div>
+            </div>
+            <hr>
+            <div class="faq-item">
+                <button class="faq-question">Can I collaborate with others?</button>
+                <div class="faq-answer">Yes, collaboration is encouraged through our platform.</div>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <div class="divider"></div>
         <div class="footer-container">
-            <!-- Branding Column -->
             <div class="footer-column footer-branding">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s" alt="projecthub" class="icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGc498Dk29IjyGQugOQ077GzHAUk-ohxX2qA&s" alt="ProjectHub">
                 <p>© 2025 Espelho. All rights reserved.</p>
             </div>
-
-            <!-- Company Column -->
             <div class="footer-column">
                 <h3>Company</h3>
                 <ul>
@@ -495,8 +585,6 @@ footer {
                     <li><a href="#">Blog</a></li>
                 </ul>
             </div>
-
-            <!-- Products Column -->
             <div class="footer-column">
                 <h3>Products</h3>
                 <ul>
@@ -506,8 +594,6 @@ footer {
                     <li><a href="#">API</a></li>
                 </ul>
             </div>
-
-            <!-- Resources Column -->
             <div class="footer-column">
                 <h3>Resources</h3>
                 <ul>
@@ -517,8 +603,6 @@ footer {
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
-
-            <!-- Legal & Social Column -->
             <div class="footer-column">
                 <h3>Legal</h3>
                 <ul>
@@ -526,13 +610,12 @@ footer {
                     <li><a href="#">Terms of Service</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="#"><img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg" alt="Twitter" style="height: 30px;width: 30px;"></a> <!-- Twitter Icon -->
-                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYS1PFxKVoAjQIkCCEXn3XOiTNbfM5K_aEug&s" alt="Lined in" style="height: 30px;width: 30px;"></a> <!-- LinkedIn Icon  -->
-                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMzEkaAN0BJ2o3ri2IsQRKXVk6ejQQqz0GUg&s" alt="GitHub" style="height: 30px;width: 30px;"></a> <!-- GitHub Icon  -->
+                    <a href="#"><img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYS1PFxKVoAjQIkCCEXn3XOiTNbfM5K_aEug&s" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMzEkaAN0BJ2o3ri2IsQRKXVk6ejQQqz0GUg&s" alt="GitHub"></a>
                 </div>
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
