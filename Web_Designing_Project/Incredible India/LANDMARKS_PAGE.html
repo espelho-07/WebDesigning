@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta tags for character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
-    <!-- Title of the webpage -->
+    <link rel="icon" type="image/x-icon" href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
     <title>Incredible India</title>
-    <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #ffffff;
-            /*background-image: linear-gradient( orange , white, green);*/
+            margin: 0;
+            padding: 0;
         }
 
-        /* Base styling for the body */
         .body {
             font-family: 'Poppins', sans-serif;
-            margin: 5% 0% 0% 0%;
+            margin: 5% 0 0 0;
             padding: 0;
-            margin-bottom: 5%;
             background-color: #ffffff;
         }
 
         .main {
-            margin: 5% 5% 0% 5%;
+            margin: 5% 5% 0 5%;
         }
 
         a:hover {
@@ -36,28 +29,26 @@
             transition: 1s;
         }
 
-        /* Styling for the fixed text at the bottom */
         .fixed-text {
             position: fixed;
             background-color: black;
             color: whitesmoke;
-            bottom: 0%;
-            /* Positions the div at the bottom */
+            bottom: 0;
             text-align: center;
             width: 100%;
+            padding: 5px 0;
         }
 
-        /* Styling for the fixed text at the top */
         .fixed-text_ {
             position: fixed;
             background-color: rgb(233, 17, 17);
             color: whitesmoke;
             top: 91%;
-            /* Positions the div at the top */
-            padding-right: 10px;
+            padding: 5px 10px;
+            right: 0;
         }
 
-        /* Navigation bar styling */
+        /* Original Navigation styling preserved */
         .Navigation {
             text-align: center;
             padding: 1% 0;
@@ -72,38 +63,35 @@
         .Navigation a {
             text-decoration: none;
             color: #0000FF;
-            /* Blue text color */
             margin-right: 2%;
             padding-left: 2%;
         }
 
-        /* Centering header elements */
-        .header h1 {
-            text-align: center;
+        .header {
+            background-image: linear-gradient(orange, white, green);
+            color: #000000;
+            padding: 10px 0;
         }
 
-        .header p {
-            text-align: center;
+        .footer {
+            background-color: rgb(23, 17, 17);
+            color: #F0F0F0;
+            padding: 10px 0;
         }
 
-        /* Footer link styling */
-        .Footer a {
-            text-decoration: none;
-            color: #0000FF;
-            /* Blue text color */
+        hr {
+            width: 90%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
         }
 
-        /* Table styling */
         table {
             border-collapse: collapse;
             margin: 20px auto;
-            /* Centers the table horizontally */
             width: 80%;
-            /* Adjusts the table width */
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #000;
             padding: 10px;
             text-align: center;
@@ -115,36 +103,28 @@
             margin-bottom: 10px;
         }
 
-        .header {
-            background-image: linear-gradient(orange, white, green);
-            color: #000000;
-
+        figure {
+            margin: 20px auto;
+            text-align: center;
         }
 
-        .footer {
-            background-color: rgb(23, 17, 17);
-            color: #F0F0F0;
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
-
-        @media screen and (min-width: 0px) and (max-width: 975px) {
+        @media screen and (max-width: 975px) {
             .body {
-                margin: 65px 0px 70px 0px;
+                margin: 65px 0 70px 0;
             }
 
             .main {
                 margin: 0 3% 3% 3%;
             }
 
-            .Navigation {
-                padding: 2%;
-                font-size: small;
-            }
-
-
             .fixed-text {
                 font-size: 12px;
-                padding: 2px;
+                padding: 5px;
             }
 
             .fixed-text_ {
@@ -152,7 +132,25 @@
                 font-size: 14px;
             }
 
-            .chatbot img {
+            table {
+                width: 95%;
+            }
+
+            th, td {
+                padding: 6px;
+                font-size: 12px; /* Smaller text for medium screens */
+            }
+
+            hr {
+                width: 95%;
+            }
+
+            figure img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .chaatbot img {
                 width: 40px;
                 height: 40px;
                 bottom: 60px;
@@ -162,43 +160,50 @@
                 margin-bottom: 30px;
             }
         }
+
+        @media screen and (max-width: 480px) {
+            .fixed-text {
+                font-size: 10px;
+            }
+
+            .fixed-text_ {
+                top: 80%;
+                font-size: 12px;
+            }
+
+            table {
+                width: 98%;
+            }
+
+            th, td {
+                padding: 4px;
+                font-size: 10px; /* Even smaller text for small screens */
+            }
+
+            hr {
+                width: 98%;
+            }
+        }
     </style>
 </head>
-
 <body>
-    <!-- Fixed text at the top -->
     <div class="fixed-text_">
-        <!-- Adjusted text alignment -->
-        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Book Your
-            Travel</a>
+        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Book Your Travel</a>
     </div>
 
-
-    <!-- Fixed text at the bottom -->
     <div class="fixed-text">
         Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
         we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
         <a href="mailto:info.mot@gov.in" style="color: red;">info.mot@gov.in</a>.
-        <!-- Corrected email link -->
     </div>
 
-    <div class="chaatbot">
-        <a href="https://chatgpt.com/" target="_self">
-            <img src="https://images-platform.99static.com/jQu2xohritutSVmnVq7np7rbkxg=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/106/106359/attachment_106359975"
-                alt="Chatbot" title="How Can I Help You? &#x1F60A" width="50" height="50"
-                style="border-radius: 50%; position: fixed; bottom: 20px; right: 20px;">
-        </a>
-    </div>
-
+        
 
     <div class="body">
-        <p style="text-align: center;font-family: 'Poppins', sans-serif;font-size: xx-large;font-weight: bolder;"
-            class="header">INDIAN
-            LANDMARKS</p>
-        <!-- Navigation menu -->
+        <p style="text-align: center; font-family: 'Poppins', sans-serif; font-size: xx-large; font-weight: bolder;" class="header">INDIAN LANDMARKS</p>
+
         <div class="Navigation">
             <nav>
-                <!-- Removed redundant inline styles -->
                 <a href="HOME_PAGE.html">Home</a>
                 <a href="CULTURE_PAGE.html">Culture</a>
                 <a href="LANDMARKS_PAGE.html">Landmarks</a>
@@ -206,50 +211,32 @@
                 <a href="CONTACT_US_PAGE.html">Contact Us</a>
             </nav>
         </div>
-
         <hr>
 
-        <!-- Main content area -->
         <main class="main">
-            <!-- Section for famous landmarks -->
             <section>
                 <h2>Famous Landmarks In India</h2>
                 <p><b>Explore the iconic landmarks that define the heritage and history of India.</b></p>
 
-                <!-- Article about iconic monuments -->
                 <article>
                     <h3>Iconic Monuments</h3>
-                    <p>India is home to some of the awe-inspiring landmarks in the world. These monuments reflect its
-                        rich
-                        cultural heritage and historical significance:</p>
+                    <p>India is home to some of the awe-inspiring landmarks in the world. These monuments reflect its rich cultural heritage and historical significance:</p>
                     <ul>
-                        <li><b>Taj Mahal:</b> Located in Agra, this symbol of eternal love is one of the <mark>Seven
-                                Wonders
-                                Of The World</mark>.</li>
+                        <li><b>Taj Mahal:</b> Located in Agra, this symbol of eternal love is one of the <mark>Seven Wonders Of The World</mark>.</li>
                         <li><b>Red Fort:</b> A UNESCO World Heritage Site in Delhi, showcasing Mughal architecture.</li>
-                        <li><b>Hawa Mahal:</b> Known as the "Palace of Winds," this Jaipur marvel is famous for its
-                            intricate latticework.</li>
-                        <li><b>Charminar:</b> An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic
-                            architecture.
-                        </li>
+                        <li><b>Hawa Mahal:</b> Known as the "Palace of Winds," this Jaipur marvel is famous for its intricate latticework.</li>
+                        <li><b>Charminar:</b> An iconic mosque in Hyderabad and a masterpiece of Indo-Islamic architecture.</li>
                     </ul>
-                    <figure style="text-align: center;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdi93GKsnrIyTUlHr2maXQQQSEye7brFo4QA&s"
-                            title="Red Fort" width="300" height="200" alt="Red Fort in Delhi"
-                            style="border-radius: 10px; border: 2px dotted;">
+                    <figure>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdi93GKsnrIyTUlHr2maXQQQSEye7brFo4QA&s" title="Red Fort" alt="Red Fort in Delhi" style="border-radius: 10px; border: 2px dotted;">
                         <figcaption>The Majestic Red Fort in Delhi</figcaption>
                     </figure>
                 </article>
             </section>
 
-            <!-- Section for Indian states and capitals -->
             <section>
                 <h2>Indian States and Capitals</h2>
-                <p>India is a union of states, each with its unique cultural and geographical identity. Here's a
-                    detailed
-                    table listing some Indian states, their capitals, and key data:</p>
-
-                <!-- Table listing Indian states, their capitals, and key data -->
+                <p>India is a union of states, each with its unique cultural and geographical identity. Here's a detailed table listing some Indian states, their capitals, and key data:</p>
                 <table border="1" cellspacing="0">
                     <caption>List of Indian States</caption>
                     <thead>
@@ -293,36 +280,27 @@
                 </table>
             </section>
 
-            <!-- Fun Fact Section -->
             <section>
                 <h2>Fun Fact</h2>
-                <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices,
-                    including one located on a structure in Dal Lake, Srinagar.</p>
-                <figure style="text-align: center;">
-                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=170x170&k=20&c=cZrJSXaJ74-DHOgvA67CnNBS3GfxnnJrnHl66hev4Wk="
-                        title="Dal Lake" alt="Dal Lake in Srinagar" width="300" height="200"
-                        style="border-radius: 10px; border: 2px dotted;">
+                <p>Did you know? India has the largest postal network in the world, with over 1,50,000 post offices, including one located on a structure in Dal Lake, Srinagar.</p>
+                <figure>
+                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=170x170&k=20&c=cZrJSXaJ74-DHOgvA67CnNBS3GfxnnJrnHl66hev4Wk=" title="Dal Lake" alt="Dal Lake in Srinagar" style="border-radius: 10px; border: 2px dotted;">
                     <figcaption>The floating post office in Dal Lake, Srinagar</figcaption>
                 </figure>
             </section>
 
-            <!-- Back to Home link -->
             <nav>
-                <a href="HOME_PAGE.html">&#8592; Back to Home</a>
+                <a href="HOME_PAGE.html">← Back to Home</a>
             </nav>
         </main>
-
         <hr>
-        <br>
 
-        <!-- Footer Section -->
         <footer class="footer">
-            <p style="text-align: center;">&copy; 2025 Incredible India Project. All Rights Reserved.</p>
+            <p style="text-align: center;">© 2025 Incredible India Project. All Rights Reserved.</p>
             <address style="text-align: center;">
                 Contact us at: <a href="mailto:info@incredibleindia.com">info@incredibleindia.com</a>
             </address>
         </footer>
     </div>
 </body>
-
 </html>

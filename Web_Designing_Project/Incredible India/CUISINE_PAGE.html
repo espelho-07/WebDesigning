@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta tags for character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
-    <!-- Title of the webpage -->
+    <link rel="icon" type="image/x-icon" href="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Incredible_India_jpg_857f450f2a.jpg">
     <title>Incredible India</title>
-    <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #ffffff;
-            /*background-image: linear-gradient( orange , white, green);*/
+            margin: 0;
+            padding: 0;
         }
 
-        /* Base styling for the body */
         .body {
             font-family: 'Poppins', sans-serif;
-            margin: 5% 0% 0% 0%;
+            margin: 5% 0 0 0;
             padding: 0;
-            margin-bottom: 5%;
             background-color: #ffffff;
         }
 
         .main {
-            margin: 0% 5% 5% 5%;
+            margin: 0 5% 5% 5%;
         }
 
         a:hover {
@@ -36,28 +29,26 @@
             transition: 1s;
         }
 
-        /* Styling for the fixed text at the bottom */
         .fixed-text {
             position: fixed;
             background-color: black;
             color: whitesmoke;
-            bottom: 0%;
-            /* Positions the div at the bottom */
+            bottom: 0;
             text-align: center;
             width: 100%;
+            padding: 5px 0;
         }
 
-        /* Styling for the fixed text at the top */
         .fixed-text_ {
             position: fixed;
             background-color: rgb(233, 17, 17);
             color: whitesmoke;
             top: 91%;
-            /* Positions the div at the top */
-            padding-right: 10px;
+            padding: 5px 10px;
+            right: 0;
         }
 
-        /* Navigation bar styling */
+        /* Original Navigation styling preserved */
         .Navigation {
             text-align: center;
             padding: 1% 0;
@@ -72,57 +63,57 @@
         .Navigation a {
             text-decoration: none;
             color: #0000FF;
-            /* Blue text color */
             margin-right: 2%;
             padding-left: 2%;
-        }
-
-        /* Centering header elements */
-        .header h1 {
-            text-align: center;
-        }
-
-        .header p {
-            text-align: center;
-        }
-
-        /* Footer link styling */
-        .Footer a {
-            text-decoration: none;
-            color: #0000FF;
-            /* Blue text color */
         }
 
         .header {
             background-image: linear-gradient(orange, white, green);
             color: #000000;
-
+            padding: 10px 0;
         }
 
         .footer {
             background-color: rgb(23, 17, 17);
             color: #F0F0F0;
+            padding: 10px 0;
         }
 
+        hr {
+            width: 90%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
 
-        @media screen and (min-width: 0px) and (max-width: 975px) {
+        figure {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        @media screen and (max-width: 975px) {
             .body {
-                margin: 65px 0px 70px 0px;
+                margin: 65px 0 70px 0;
             }
 
             .main {
                 margin: 0 3% 3% 3%;
             }
 
-            .Navigation {
-                padding: 2%;
-                font-size: small;
-            }
-
-
             .fixed-text {
                 font-size: 12px;
-                padding: 2px;
+                padding: 5px;
             }
 
             .fixed-text_ {
@@ -130,17 +121,16 @@
                 font-size: 14px;
             }
 
-            form table {
-                width: 100%;
+            hr {
+                width: 95%;
             }
 
-            form td {
-                display: block;
+            figure img {
                 width: 100%;
-                margin: 5px 0;
+                max-width: 300px;
             }
 
-            .chatbot img {
+            .chaatbot img {
                 width: 40px;
                 height: 40px;
                 bottom: 60px;
@@ -150,103 +140,87 @@
                 margin-bottom: 30px;
             }
         }
+
+        @media screen and (max-width: 480px) {
+            .fixed-text {
+                font-size: 10px;
+            }
+
+            .fixed-text_ {
+                top: 80%;
+                font-size: 12px;
+            }
+
+            hr {
+                width: 98%;
+            }
+        }
     </style>
 </head>
-
-
 <body>
-
-    <!-- Fixed text at the bottom -->
     <div class="fixed-text">
         Welcome to the new Incredible India Digital Portal! While we are continuously updating and improving the site,
         we would love to hear your suggestions for features or content you'd like to see. Please share your feedback at
         <a href="mailto:info.mot@gov.in" style="color: red;">info.mot@gov.in</a>.
     </div>
 
-    <!-- Fixed text at the top -->
     <div class="fixed-text_">
-        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Book Your
-            Travel</a>
+        <a href="https://www.incredibleindia.gov.in/en" style="color: white; text-decoration: none;">Book Your Travel</a>
     </div>
-    <div class="chaatbot">
-        <a href="https://chatgpt.com/" target="_self">
-            <img src="https://images-platform.99static.com/jQu2xohritutSVmnVq7np7rbkxg=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/106/106359/attachment_106359975"
-                alt="Chatbot" title="How Can I Help You? &#x1F60A" width="50" height="50"
-                style="border-radius: 50%; position: fixed; bottom: 20px; right: 20px;">
-        </a>
-    </div>
+
+   
     <div class="body">
-        <p style="text-align: center;font-family: 'Poppins', sans-serif;font-size: xx-large;font-weight: bolder;"
-            class="header">INDIAN
-            CUISINE</p>
-        <!-- Navigation menu -->
+        <p style="text-align: center; font-family: 'Poppins', sans-serif; font-size: xx-large; font-weight: bolder;" class="header">INDIAN CUISINE</p>
+
         <div class="Navigation">
             <nav>
-                <!-- Removed redundant inline styles -->
                 <a href="HOME_PAGE.html">Home</a>
                 <a href="CULTURE_PAGE.html">Culture</a>
                 <a href="LANDMARKS_PAGE.html">Landmarks</a>
                 <a href="CUISINE_PAGE.html">Cuisine</a>
                 <a href="CONTACT_US_PAGE.html">Contact Us</a>
-
             </nav>
         </div>
-
         <hr>
 
-
-        <!-- Main content area -->
         <main class="main">
-            <!-- Section for popular Indian dishes -->
             <section>
                 <h2>Popular Indian Dishes</h2>
                 <p>Explore the flavours of India through its diverse and rich culinary traditions!</p>
-                <!-- Audio player -->
                 <audio controls>
-                    <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
-                        type="audio/ogg">
+                    <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" type="audio/ogg">
                     Your browser does not support the audio tag.
                 </audio>
             </section>
 
-            <!-- Article about North Indian Dishes -->
             <article>
                 <h3>North Indian Dishes</h3>
-                <p>North India is known for its rich, aromatic, and flavourful dishes often cooked with ghee and spices:
-                </p>
+                <p>North India is known for its rich, aromatic, and flavourful dishes often cooked with ghee and spices:</p>
                 <ul>
-                    <li><b>Biryani:</b> A fragrant rice dish made with aromatic spices and meat mixed with vegetables.
-                    </li>
+                    <li><b>Biryani:</b> A fragrant rice dish made with aromatic spices and meat mixed with vegetables.</li>
                     <li><b>Butter Chicken:</b> A creamy, tomato-based curry that's a favorite worldwide.</li>
                     <li><b>Paneer Tikka:</b> Marinated paneer cubes grilled to perfection.</li>
                 </ul>
-                <figure style="text-align: center;">
-                    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/HX/AM/DW/38411130/product-jpeg.jpeg"
-                        title="Biryani" alt="Biryani" width="300" height="200"
-                        style="border-radius: 10px; border: 2px dotted;">
+                <figure>
+                    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/6/HX/AM/DW/38411130/product-jpeg.jpeg" title="Biryani" alt="Biryani" style="border-radius: 10px; border: 2px dotted;">
                     <figcaption>Aromatic and flavourful Biryani</figcaption>
                 </figure>
             </article>
 
-            <!-- Article about South Indian Cuisine -->
             <article>
                 <h3>South Indian Cuisine</h3>
-                <p>South Indian meals offer a wide array of dishes with a perfect blend of spices and tangy flavours:
-                </p>
+                <p>South Indian meals offer a wide array of dishes with a perfect blend of spices and tangy flavours:</p>
                 <ul>
                     <li><b>Masala Dosa:</b> A crispy rice crepe stuffed with spicy potato filling.</li>
                     <li><b>Idli and Sambhar:</b> Soft rice cakes served with a tangy lentil-based vegetable stew.</li>
                     <li><b>Chettinad Chicken:</b> A fiery, flavorful chicken dish from Tamil Nadu.</li>
                 </ul>
-                <figure style="text-align: center;">
-                    <img src="https://img.freepik.com/premium-photo/butter-masala-dosa-south-indian-traditional-popular-crepe-with-filling-mixture-mashed-potatoes-fried-onions-with-butter-topping-served-with-chutney-sambar-selective-focus_726363-230.jpg?w=360"
-                        title="Masala Dosa" alt="Masala Dosa" width="300" height="200"
-                        style="border-radius: 10px; border: 2px dotted;">
+                <figure>
+                    <img src="https://img.freepik.com/premium-photo/butter-masala-dosa-south-indian-traditional-popular-crepe-with-filling-mixture-mashed-potatoes-fried-onions-with-butter-topping-served-with-chutney-sambar-selective-focus_726363-230.jpg?w=360" title="Masala Dosa" alt="Masala Dosa" style="border-radius: 10px; border: 2px dotted;">
                     <figcaption>South Indian favorite: Masala Dosa</figcaption>
                 </figure>
             </article>
 
-            <!-- Article about Sweet Delights -->
             <article>
                 <h3>Sweet Delights</h3>
                 <p>No Indian meal is complete without indulging in some mouth-watering desserts:</p>
@@ -255,31 +229,24 @@
                     <li><b>Rasgulla:</b> Soft and spongy cheese balls in light sugar syrup.</li>
                     <li><b>Payasam:</b> A South Indian dessert made of milk, rice, and jaggery.</li>
                 </ul>
-                <figure style="text-align: center;">
-                    <img src="https://b.zmtcdn.com/data/pictures/2/21030632/17c15efbbf20425dfbc5ff06c285d093_o2_featured_v2.jpg"
-                        title="Gulab Jamun" alt="Gulab Jamun" width="300" height="200"
-                        style="border-radius: 10px; border: 2px dotted;">
+                <figure>
+                    <img src="https://b.zmtcdn.com/data/pictures/2/21030632/17c15efbbf20425dfbc5ff06c285d093_o2_featured_v2.jpg" title="Gulab Jamun" alt="Gulab Jamun" style="border-radius: 10px; border: 2px dotted;">
                     <figcaption>Irresistible Gulab Jamun</figcaption>
                 </figure>
             </article>
 
-            <!-- Back to Home link -->
             <nav>
-                <a href="HOME_PAGE.html">&#8592; Back to Home</a>
+                <a href="HOME_PAGE.html">← Back to Home</a>
             </nav>
         </main>
-        <br>
         <hr>
 
-        <!-- Contact information -->
         <footer class="footer">
-            <p style="text-align: center;">&copy;2025 Incredible India Project. All Rights Reserved.</p>
+            <p style="text-align: center;">©2025 Incredible India Project. All Rights Reserved.</p>
             <address style="text-align: center;">
                 Contact us at: <a href="mailto:info@incredibleindia.com" target="_blank">info@incredibleindia.com</a>
             </address>
         </footer>
     </div>
-
 </body>
-
-</html>
+</html> 
